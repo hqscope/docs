@@ -6,7 +6,7 @@
   "colors": {
     "primary": "#C42B26",
     "light": "#E5484D",
-    "dark": "#A3211D"
+    "dark": "#BA2824"
   },
   "background": {
     "color": {
@@ -81,22 +81,40 @@
             "pages": [
               "chrome/overview",
               "chrome/install",
-              "chrome/connect-your-courses"
+              "chrome/connect-your-courses",
+              "chrome/sign-in"
             ]
           },
           {
-            "group": "Use the extension",
+            "group": "Find and track",
             "pages": [
               "chrome/search",
+              "chrome/due-dates",
+              "chrome/syllabus-deadlines"
+            ]
+          },
+          {
+            "group": "Study",
+            "pages": [
               "chrome/ask-scope",
               "chrome/study-plan",
+              "chrome/practice",
+              "chrome/course-tools",
+              "chrome/study-in-polya"
+            ]
+          },
+          {
+            "group": "Lectra and more",
+            "pages": [
               "chrome/send-to-ipad",
+              "chrome/canvas-appearance",
               "chrome/berkeley-schedule-planner"
             ]
           },
           {
             "group": "Reference",
             "pages": [
+              "chrome/commands",
               "chrome/keyboard-shortcuts",
               "chrome/settings",
               "chrome/privacy-and-data",
@@ -127,8 +145,7 @@
               "lectra/text",
               "lectra/notebooks",
               "lectra/scan",
-              "lectra/search",
-              "lectra/version-history"
+              "lectra/search"
             ]
           },
           {
@@ -144,8 +161,8 @@
               "lectra/python",
               "lectra/jupyter-notebooks",
               "lectra/terminal",
-              "lectra/git",
-              "lectra/code-editor"
+              "lectra/code-editor",
+              "lectra/git"
             ]
           },
           {
@@ -158,10 +175,11 @@
             ]
           },
           {
-            "group": "Share and back up",
+            "group": "Keep your work",
             "pages": [
               "lectra/export-and-share",
-              "lectra/backups"
+              "lectra/backups",
+              "lectra/version-history"
             ]
           },
           {
@@ -247,6 +265,63 @@
   "footer": {
     "socials": {
       "website": "https://canvascope.org"
-    }
+    },
+    "links": [
+      {
+        "header": "Get the apps",
+        "items": [
+          {
+            "label": "Scope for Chrome",
+            "href": "https://chromewebstore.google.com/detail/scope/bamoelobnoepklagbcokjnlipfhcfdbb"
+          },
+          {
+            "label": "Lectra for iPad",
+            "href": "https://apps.apple.com/us/app/lectra-notes/id6759754531"
+          },
+          {
+            "label": "Lectra for Mac",
+            "href": "https://canvascope.org/mac"
+          },
+          {
+            "label": "Polya",
+            "href": "https://askpolya.com"
+          }
+        ]
+      },
+      {
+        "header": "Help",
+        "items": [
+          {
+            "label": "Get help",
+            "href": "/resources/get-help"
+          },
+          {
+            "label": "Troubleshooting",
+            "href": "/resources/troubleshooting"
+          },
+          {
+            "label": "Release notes",
+            "href": "/resources/release-notes"
+          }
+        ]
+      },
+      {
+        "header": "Legal",
+        "items": [
+          {
+            "label": "Privacy policy",
+            "href": "https://www.canvascope.org/privacy"
+          },
+          {
+            "label": "Terms of service",
+            "href": "https://www.canvascope.org/terms"
+          },
+          {
+            "label": "Polya privacy policy",
+            "href": "https://askpolya.com/privacy"
+          }
+        ]
+      }
+    ]
   }
 }

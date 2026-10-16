@@ -1,0 +1,242 @@
+---
+title: "Use the terminal"
+description: "Open a shell on your iPad to manage files, run Python, use Git, and connect to a remote computer over SSH."
+sidebarTitle: "Terminal"
+---
+
+Lectra includes a terminal: a text window where you type commands to work with files, run Python, and use Git, all on your iPad. It's built for Lectra, so it has its own set of commands rather than a full Linux or macOS system. If you need tools that Lectra doesn't include, you can connect to another computer over SSH.
+
+## Open the terminal
+
+You can open the terminal on its own or next to a project's code.
+
+<Tabs>
+  <Tab title="On its own">
+    <Steps>
+      <Step title="Go to Projects">
+        In your library, tap **Projects**.
+      </Step>
+      <Step title="Open the New menu">
+        Tap **New**.
+      </Step>
+      <Step title="Choose Terminal">
+        Tap **Terminal**. The terminal opens full screen, in your `Projects` folder.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Inside a project">
+    In an open project, tap the terminal button in the top bar. The terminal opens in a panel under the code, in that project's folder. Drag the handle above it to resize it.
+
+    You can also press <kbd>⌘</kbd> <kbd>&#96;</kbd>, or choose **Show Terminal** in the command palette. To learn about projects, see [Use the code editor](/lectra/code-editor).
+  </Tab>
+</Tabs>
+
+The first line says "Lectra terminal — type `help` for commands." Type a command, and then press Return.
+
+To close the full-screen terminal, tap **Close Terminal** (the × in the header). Your tabs come back when you open it again, until Lectra quits.
+
+## Work with tabs
+
+| To | Do this |
+|---|---|
+| Open a new tab | Tap **New Tab** (+), or press <kbd>⌘</kbd> <kbd>T</kbd>. |
+| Close a tab | Tap the × on the tab, or press and hold the tab and tap **Close Tab**. You can also press <kbd>⌘</kbd> <kbd>W</kbd>. |
+| Switch tabs | Tap a tab, or press <kbd>⌘</kbd> <kbd>1</kbd> through <kbd>⌘</kbd> <kbd>9</kbd>. |
+
+Each tab is named after the folder it's in. Closing the last tab closes the terminal.
+
+## Where your files are
+
+The terminal sees Lectra's own storage on your iPad. Your home folder (`~`) contains:
+
+| Folder | What's in it |
+|---|---|
+| `Projects` | Your projects from the **Projects** tab, including repositories you clone. The terminal starts here. |
+| `notebooks` | Your Python notebooks, listed by title, such as `My_Notes.ipynb`. |
+| `pdfs` | The documents in your library, listed by title. |
+| `.Trash` | Files you deleted with `rm`. |
+
+Names with spaces show with underscores instead, such as `Lecture_3`. You can't leave Lectra's storage. A command that tries says "outside the app sandbox".
+
+<Tip>
+  Do your work inside `Projects`. To open a library document or notebook from the terminal, use `open`, for example `open notebooks/My_Notes.ipynb`.
+</Tip>
+
+## Built-in commands
+
+Type `help` to see a summary in the terminal. The following tables list every command.
+
+### Files and folders
+
+| Command | What it does |
+|---|---|
+| `pwd` | Shows the folder you're in. |
+| `cd [folder]` | Changes folder. With no folder, goes to your home folder. |
+| `ls [paths]` | Lists files. `-a` includes hidden files. `-l` shows sizes and dates. |
+| `tree [folder]` | Shows a folder as a tree. `-a` includes hidden files. `-L N` limits the depth. |
+| `mkdir` | Creates a folder. `-p` creates parent folders too. |
+| `rmdir` | Removes an empty folder. |
+| `touch` | Creates an empty file, or updates a file's date. |
+| `cp` | Copies files or folders. Overwrites without asking. |
+| `mv` | Moves or renames files or folders. Overwrites without asking. |
+| `rm` | Moves files to the Trash, so you can restore them. `-r` removes folders. `-f` skips errors. |
+| `trash` | Lists the Trash. `trash restore <number or name>` brings a file back. `trash empty` deletes everything in the Trash for good. |
+| `stat` | Shows a file's size, type, and last change. |
+| `basename`, `dirname` | Show the last part, or the folder part, of a path. |
+
+### Read and search text
+
+| Command | What it does |
+|---|---|
+| `cat` | Prints files. |
+| `head`, `tail` | Print the first or last lines of a file. `-n N` sets how many. The default is 10. |
+| `wc` | Counts lines (`-l`), words (`-w`), and bytes (`-c`). |
+| `grep pattern [files]` | Finds lines that match. `-i` ignores case, `-v` shows lines that don't match, `-n` shows line numbers. Searches files, not folders. |
+| `find [paths]` | Finds files. Supports `-name`, `-iname`, `-path`, `-type f` or `-type d`, `-maxdepth`, and `-mindepth`. |
+| `sort` | Sorts lines. `-r` reverses, `-n` sorts numbers, `-u` removes duplicates, `-f` ignores case. |
+| `uniq` | Collapses repeated lines next to each other. `-c` counts them, `-d` shows only repeated lines, `-u` shows only lines that aren't repeated. |
+| `cut` | Picks fields (`-f`, with `-d` for the separator) or characters (`-c`). |
+| `diff a b` | Compares two files line by line. `-u` is accepted. |
+
+### Open and edit
+
+| Command | What it does |
+|---|---|
+| `open <file>` | Opens a file in Lectra. PDFs open for markup, notebooks open in the notebook editor, and project files open the project in the code editor. |
+| `nano`, `vi`, `vim <file>` | In a project's terminal panel, opens the file in the code editor next to the terminal. Creates the file if it doesn't exist. |
+
+### Shell and settings
+
+| Command | What it does |
+|---|---|
+| `echo` | Prints text. `-n` leaves off the new line. |
+| `printf` | Prints formatted text. Supports `%s`, `%d`, `%i`, and `%f`. |
+| `env` | Lists variables. |
+| `export NAME=value` | Sets a variable. |
+| `alias name='command'`, `unalias name` | Creates or removes a shortcut for a command. |
+| `source file`, `. file` | Runs the commands in a file, one line at a time. |
+| `which` | Tells you what a command is. |
+| `clear` | Clears the screen. |
+| `help` | Shows a summary of commands. |
+| `date` | Shows the date and time. `-u` uses UTC. `+FORMAT` sets the format, such as `+%Y-%m-%d`. |
+| `seq` | Prints a sequence of numbers. |
+| `sleep N` | Waits N seconds, up to 300. |
+| `test`, `[ ]` | Checks a condition, such as whether a file exists. |
+| `true`, `false` | Do nothing, and succeed or fail. |
+
+<Tip>
+  To set up aliases or variables for every new tab, put the commands in a file named `.lectrarc` in your home folder. Lectra runs it each time you open a tab.
+</Tip>
+
+### Python
+
+| Command | What it does |
+|---|---|
+| `python`, `python3` | With no file, starts interactive Python. Type `exit()` to leave. |
+| `python file.py` | Runs a Python file. You can also use `-c "code"` or `-m module`. |
+| `pip install <package>` | Installs a package from PyPI. Needs an internet connection. |
+| `pip list` | Lists installed packages. |
+
+Files that a Python script creates aren't saved to your folders. To learn which packages are included and what Python can do on your iPad, see [Run Python](/lectra/python).
+
+### Git
+
+The `git` command works with repositories in your `Projects` folder. It supports these subcommands:
+
+`init`, `clone`, `add`, `rm`, `status`, `commit`, `log`, `branch`, `tag`, `show`, `checkout`, `switch`, `restore`, `diff`, `fetch`, `pull`, `push`, `remote`, `config`, `rev-parse`, and `version`.
+
+For what each one supports, how to sign in to GitHub, and the limits, see [Use Git](/lectra/git).
+
+### Remote computers
+
+| Command | What it does |
+|---|---|
+| `ssh user@host` | Connects to another computer, such as a Linux server, over SSH. Add `-p port` for a port other than 22. |
+
+## Combine commands
+
+The terminal supports the following:
+
+- **Pipes**: send one command's output to another, such as `ls | grep .py`.
+- **Redirection**: save output with `>` or append with `>>`, and read input with `<`. You can also redirect errors with `2>` and `2>&1`.
+- **Chaining**: run commands in order with `;`, only after success with `&&`, or only after failure with `||`.
+- **Wildcards**: `*`, `?`, and `[a-z]` match file names.
+- **Variables**: `$NAME` and `${NAME}`. `$?` is the result of the last command.
+- **Command substitution**: `$(command)` puts one command's output into another.
+- **Quotes**: single quotes, double quotes, and `\` work as in other shells.
+
+The terminal doesn't support background jobs (`&`), `if`, `for`, or `while` statements, functions, or brace expansion such as `{a,b}`.
+
+## Use the keyboard
+
+| Key | What it does |
+|---|---|
+| <kbd>↑</kbd> and <kbd>↓</kbd> | Go back through earlier commands. Lectra keeps your last 1,000 commands, even after you quit. |
+| <kbd>Tab</kbd> | Completes a file or folder name. |
+| <kbd>Control</kbd> <kbd>C</kbd> | Cancels a Python `input()` prompt. It doesn't stop a running command. |
+
+These keys need a hardware keyboard. The terminal has no extra key row on the on-screen keyboard, except during an SSH session.
+
+To copy output, select it and copy it. When you paste, line breaks become spaces, because the terminal takes one line at a time.
+
+## Connect to another computer with SSH
+
+Use SSH when you need tools that Lectra doesn't include, such as compilers or Node.js.
+
+<Steps>
+  <Step title="Start the connection">
+    Type `ssh user@host`, replacing `user` with your account name and `host` with the computer's address. Add `-p 2222` if the computer uses another port.
+  </Step>
+  <Step title="Enter your password">
+    At `Password for user@host:`, type your password, and then press Return. The password doesn't show as you type.
+  </Step>
+  <Step title="Work on the remote computer">
+    The header shows **SSH** and the computer's address. A key row above the on-screen keyboard adds **esc**, **ctrl**, Tab, arrows, and other keys.
+  </Step>
+  <Step title="Disconnect">
+    Tap **Disconnect** in the header, or type `exit`.
+  </Step>
+</Steps>
+
+<Note>
+  SSH in Lectra supports password sign-in only. The first time you connect to a computer, Lectra trusts it and remembers it. If that computer's identity changes later, Lectra refuses to connect and says "Host key changed".
+</Note>
+
+## Limits
+
+- The terminal runs one command at a time. <kbd>Control</kbd> <kbd>C</kbd> doesn't stop a long-running command.
+- Commands that aren't listed on this page aren't available. For example, `sed`, `awk`, `curl`, `tar`, `chmod`, and `less` say "command not found".
+- Developer tools such as `node`, `npm`, `make`, `docker`, `gcc`, and `java` aren't available on the iPad. The terminal tells you to use SSH instead.
+- Some Git features aren't available, including `rebase`, `stash`, submodules, and SSH remotes. To learn more, see [Use Git](/lectra/git#limits).
+- There's no `exit`, `history`, or `unset` command in the local shell.
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="“command not found”">
+    The command isn't built into Lectra's terminal. Check the tables on this page. If you need the tool, connect to a computer that has it with `ssh`.
+  </Accordion>
+  <Accordion title="“not available in the local iPad runtime”">
+    The tool, such as `npm` or `make`, can't run on an iPad. Use `ssh` to run it on another computer.
+  </Accordion>
+  <Accordion title="“outside the app sandbox”">
+    The path points outside Lectra's storage. Work inside your home folder (`~`).
+  </Accordion>
+  <Accordion title="I deleted a file by mistake">
+    Type `trash` to list deleted files, and then type `trash restore` followed by the file's number or name.
+  </Accordion>
+  <Accordion title="nano doesn't open anything">
+    `nano`, `vi`, and `vim` open files only from a project's terminal panel. Open the project first, and then open its terminal. To learn more, see [Use the code editor](/lectra/code-editor).
+  </Accordion>
+</AccordionGroup>
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Run Python" icon="python" href="/lectra/python">
+    Run Python on your iPad without an internet connection.
+  </Card>
+  <Card title="Use Git" icon="code-branch" href="/lectra/git">
+    Clone, commit, and push from your iPad.
+  </Card>
+</CardGroup>

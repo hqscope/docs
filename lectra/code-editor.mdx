@@ -1,0 +1,140 @@
+---
+title: "Use the code editor"
+description: "Create projects, edit code with syntax highlighting, search across files, and keep a terminal next to your code."
+sidebarTitle: "Code editor"
+---
+
+Lectra has a code editor for programming assignments and other projects. A project is a folder of files. You can edit files with syntax highlighting, search across the whole project, jump to functions, keep a terminal open under your code, and track changes with Git.
+
+## Create a project
+
+You can start an empty project or copy one from GitHub.
+
+<Tabs>
+  <Tab title="Empty project">
+    <Steps>
+      <Step title="Go to Projects">
+        In your library, tap **Projects**.
+      </Step>
+      <Step title="Create a folder">
+        Tap **New**, and then tap **Folder**.
+      </Step>
+      <Step title="Name it">
+        In **Create Project Folder**, type a name, and then tap **Create**.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="From GitHub">
+    In **Projects**, tap **New** > **Clone a Repo**, and then choose a repository. To learn more, see [Use Git](/lectra/git#clone-a-repository).
+  </Tab>
+</Tabs>
+
+To open a project, tap it in the **Projects** tab. To delete one, tap **Select** in the Projects tab, select the project, and then tap **Delete**.
+
+## Work with files
+
+When a project opens, its files are listed in **Files** on the left. To show or hide the list, tap the sidebar button at the top left, or press <kbd>⌘</kbd> <kbd>B</kbd>.
+
+- **Open a file**: tap it in **Files**. It opens in a tab.
+- **Create a file**: tap **New File** (+) in **Files**, or press <kbd>⌘</kbd> <kbd>N</kbd>. Type a path such as `src/main.py`, and then tap **Create**. Lectra creates any folders in the path.
+- **Refresh the list**: tap **Refresh Files**, for example after you create files in the terminal.
+
+To rename, move, or delete files and folders, use the terminal commands `mv`, `rm`, and `mkdir`. To learn more, see [Use the terminal](/lectra/terminal#files-and-folders).
+
+## Edit code
+
+Lectra saves as you type. The top bar shows **Saving...** and then **Saved**. You can also press <kbd>⌘</kbd> <kbd>S</kbd>.
+
+The editor highlights these languages: Python, JavaScript, TypeScript, JSX and TSX, HTML, XML, SVG, CSS, SCSS, Less, JSON, Markdown, Rust, C, C++, Objective-C, Go, Swift, YAML, TOML, shell scripts, and Dockerfiles.
+
+### Tabs and split view
+
+- To switch tabs, tap a tab, or press <kbd>⌘</kbd> <kbd>Shift</kbd> <kbd>]</kbd> and <kbd>⌘</kbd> <kbd>Shift</kbd> <kbd>[</kbd>.
+- To close a tab, press and hold it and tap **Close Tab**, or press <kbd>⌘</kbd> <kbd>W</kbd>.
+- To see two files side by side, press and hold a tab and tap **Open to the Side**, or press <kbd>⌘</kbd> <kbd>&#92;</kbd>. This option isn't available on narrow screens.
+
+## Find your way around
+
+| To | Do this |
+|---|---|
+| Open a file by name | Press <kbd>⌘</kbd> <kbd>P</kbd>, and then type in **Go to file…**. |
+| Run a command | Press <kbd>⌘</kbd> <kbd>Shift</kbd> <kbd>P</kbd>, and then type in **Run a command…**. |
+| Find and replace in the file | Press <kbd>⌘</kbd> <kbd>F</kbd>. Options include matching case, regular expressions, whole words, and **replace all**. |
+| Search every file in the project | Press <kbd>⌘</kbd> <kbd>Shift</kbd> <kbd>F</kbd>, and then type in **Search in project…**. Tap a result to open it. |
+| Jump to a function or heading | Tap **Go to Symbol** in the top bar, or press <kbd>⌘</kbd> <kbd>Shift</kbd> <kbd>O</kbd>. |
+| Go to a line | Press <kbd>⌘</kbd> <kbd>L</kbd>, type a line number, and then tap **Go**. |
+
+Project search ignores case, skips hidden folders and very large files, and shows up to 800 results.
+
+### Command palette commands
+
+The command palette (<kbd>⌘</kbd> <kbd>Shift</kbd> <kbd>P</kbd>) lists these commands:
+
+- **New File**
+- **Show Terminal** or **Hide Terminal**
+- **Show Sidebar** or **Hide Sidebar**
+- **Sync with GitHub**
+- **Refresh Files**
+- **Search in Files**
+- **Source Control**
+- **Go to Symbol**
+- **Go to Line**
+- **Save**
+- **Close Tab**
+- **Open to the Side** or **Close Split**
+
+## Run code and commands
+
+Each project has a terminal that opens in the project's folder. Tap the terminal button in the top bar, or press <kbd>⌘</kbd> <kbd>&#96;</kbd>. Drag the handle above the terminal to resize it.
+
+There's no Run button in the editor. To run a Python file, type `python` followed by the file name in the terminal, such as `python main.py`. To learn more, see [Run Python](/lectra/python) and [Use the terminal](/lectra/terminal).
+
+Jupyter notebooks (`.ipynb` files) in a project open in the notebook editor when you tap them. To learn more, see [Use Jupyter notebooks](/lectra/jupyter-notebooks).
+
+## Track changes with Git
+
+The top bar has buttons for version control:
+
+- **Start Version Control** (+): appears when the project isn't tracked yet. Tap it to start keeping a history of changes.
+- **Source Control** (<kbd>Control</kbd> <kbd>Shift</kbd> <kbd>G</kbd>): see changed files, stage them, and commit.
+- **Sync to GitHub**: appears in projects that use Git. Commits all your changes and syncs them with GitHub in one step.
+
+To learn more, see [Use Git](/lectra/git).
+
+## Keyboard shortcuts
+
+| Shortcut | What it does |
+|---|---|
+| <kbd>⌘</kbd> <kbd>P</kbd> | Go to file |
+| <kbd>⌘</kbd> <kbd>Shift</kbd> <kbd>P</kbd> | Command palette |
+| <kbd>⌘</kbd> <kbd>S</kbd> | Save |
+| <kbd>⌘</kbd> <kbd>N</kbd> | New file |
+| <kbd>⌘</kbd> <kbd>W</kbd> | Close tab |
+| <kbd>⌘</kbd> <kbd>Shift</kbd> <kbd>]</kbd> | Next tab |
+| <kbd>⌘</kbd> <kbd>Shift</kbd> <kbd>[</kbd> | Previous tab |
+| <kbd>⌘</kbd> <kbd>B</kbd> | Show or hide the file list |
+| <kbd>⌘</kbd> <kbd>&#92;</kbd> | Open to the side, or close the split |
+| <kbd>⌘</kbd> <kbd>F</kbd> | Find and replace in the file |
+| <kbd>⌘</kbd> <kbd>Shift</kbd> <kbd>F</kbd> | Search in files |
+| <kbd>⌘</kbd> <kbd>Shift</kbd> <kbd>O</kbd> | Go to symbol |
+| <kbd>⌘</kbd> <kbd>L</kbd> | Go to line |
+| <kbd>⌘</kbd> <kbd>&#96;</kbd> | Show or hide the terminal |
+| <kbd>Control</kbd> <kbd>Shift</kbd> <kbd>G</kbd> | Source control |
+
+## Limits
+
+- The file list can create files but not rename, move, or delete them. Use the terminal for those.
+- You can't import a folder from the Files app as a project. Create a project, or clone one from GitHub.
+- Binary files, such as images, don't open in the editor.
+- Code completion offers only basic suggestions, such as words already in the file.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Use Git" icon="code-branch" href="/lectra/git">
+    Clone, commit, and push from your iPad.
+  </Card>
+  <Card title="Use the terminal" icon="terminal" href="/lectra/terminal">
+    Run commands next to your code.
+  </Card>
+</CardGroup>

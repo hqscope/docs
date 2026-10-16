@@ -1,0 +1,132 @@
+---
+title: "Plan classes in Berkeley's Schedule Planner"
+description: "See instructor ratings, student comments, past grades, building locations, and how a class fits your Google Calendar week, right inside UC Berkeley's Schedule Planner."
+sidebarTitle: "Berkeley Schedule Planner"
+---
+
+If you're a UC Berkeley student, Scope adds class research to Berkeley's Schedule Planner. Hover an instructor, a class, or a meeting time to see ratings, past grades, where the building is, and whether the class clashes with your week. You get the answers on the planner page instead of in a dozen other tabs.
+
+<Note>
+  This feature works only on UC Berkeley's Schedule Planner at `berkeley.collegescheduler.com`. It doesn't appear for other schools.
+</Note>
+
+## Before you begin
+
+- Install Scope. See [Install the Scope extension](/chrome/install).
+- Sign in to Scope with Google. Ratings, comments, grades, and maps appear only after you sign in. See [Sign in to Scope](/chrome/sign-in).
+- Make sure **Schedule Planner insight** is on. It's on by default. To check, open Scope and go to **Settings** > **Features**.
+
+If you're signed out, any card shows **Sign in to see this.** with a **Sign in to Scope** button. Click it to sign in without leaving the planner.
+
+## Open the Schedule Planner
+
+Open Berkeley's Schedule Planner the way you normally do, for example from CalCentral. When a page lists classes, Scope marks what you can hover:
+
+- Instructor names get a solid red underline.
+- The subject, course number, and **Day(s) & Location(s)** cells get a dotted underline.
+- Each class row gets a star button, **Quick look at this class**.
+- A small **Scope** button sits in the bottom-right corner of the page.
+
+To close any card, move the pointer away or press <kbd>Esc</kbd>.
+
+## See instructor ratings and comments
+
+Hover an instructor's name. A card opens with their Rate My Professors profile:
+
+- **Overall**, **Difficulty**, and **Would retake** (as a percentage).
+- A bar showing how the ratings are spread out.
+- The number of ratings and a **View on RMP →** link to the full profile.
+- Student comments: their Rate My Professors reviews first, then posts and comments from r/berkeley that mention them. Each comment links to where it came from.
+
+Reviews from the class you're hovering move to the top, because a professor's rating in a small seminar can be very different from their rating in a large lecture.
+
+Some instructors have more than one Rate My Professors profile. Scope shows the best match and notes how many other profiles matched. If it can't tell which profile is right, it shows each one instead of combining them.
+
+<Note>
+  Comments from r/berkeley appear only if Reddit lets your browser search it. If you see **Couldn't reach Reddit.**, open reddit.com in a tab once, then click **Try again** on the card.
+</Note>
+
+## See past grades for a class
+
+Hover the subject or course number of a class. A card shows the grade history from Berkeleytime:
+
+- **Average** grade, **A range** (the share of students who got an A), and **Students** (how many were graded).
+- A chart of every grade from A+ to F. Hover a bar to see its exact share.
+- A switch between the listed instructor and **Everyone**, when Berkeleytime has grades for that instructor.
+- **Every semester →**, which opens the full history on Berkeleytime.
+
+## See where and when a class meets
+
+Hover the **Day(s) & Location(s)** cell. A card shows:
+
+- A week grid with the class's meeting times. If your Google Calendar is connected, it also shows your other planned classes and your own calendar events, and notes **Clashes with** an event when they overlap.
+- A small campus map with a pin on the building, the building name, and the room.
+- **Open in Google Maps →**, which opens the building in Google Maps.
+- **Add to Google Calendar**, which adds the class to your calendar.
+
+The week grid shows the current Monday through Sunday. Online and to-be-announced locations don't get a map pin.
+
+## Add a class to Google Calendar
+
+<Steps>
+  <Step title="Open the class's meeting card">
+    Hover the **Day(s) & Location(s)** cell, or click the class's star button.
+  </Step>
+  <Step title="Add it">
+    Click **Add to Google Calendar**. The button reads **Adding…**, then **✓ Added**.
+  </Step>
+</Steps>
+
+Scope adds one repeating weekly event for each meeting pattern to your main Google Calendar. The event is named after the class, such as "Statistics 134", includes the room, and repeats until about the end of the term. If Scope can't tell the term, the event repeats for 16 weeks.
+
+If you see **Connect Google in Scope first.**, sign in to Scope with Google, then try again.
+
+## Get a quick look at one class
+
+Hover or click a class row's star button, **Quick look at this class**. A card brings together **When & where**, **Instructor**, and **Grades** for that class, with an **Add to Google Calendar** button.
+
+## Compare everything on the page
+
+Click the **Scope** button in the bottom-right corner. Under **Everything on this page**, you can open, in new tabs:
+
+| Option | What it opens |
+|---|---|
+| **Compare grades** | Berkeleytime grade pages for up to 6 classes on the page |
+| **Professor ratings** | Rate My Professors pages for up to 8 instructors on the page |
+| **Walk the buildings** | Google Maps for up to 8 buildings on the page |
+
+Tabs open only when you click an option.
+
+## Turn the feature off
+
+Open Scope, go to **Settings** > **Features**, and turn off **Schedule Planner insight**. The underlines, cards, star buttons, and the **Scope** button disappear from the planner right away. Turn it back on the same way.
+
+## What Scope shares to look things up
+
+While the feature is on and you're signed in, Scope looks up the classes and instructors listed on the planner page as soon as it loads, so the cards are ready when you hover.
+
+| Site | What Scope sends |
+|---|---|
+| Rate My Professors | Instructor names |
+| Reddit (r/berkeley) | Instructor names, as searches made with your own Reddit sign-in, the same as if you searched Reddit yourself |
+| Berkeleytime | The subject, course number, and instructor name of each class |
+| Google Calendar | Requests to read your events for the week, and to add the classes you choose |
+
+None of these lookups include your Scope account. Scope keeps the results in your browser for a while so the cards open right away: ratings and comments for up to 7 days, and grades for up to 30 days. Your calendar events are read for the card you're looking at and aren't saved. To remove the saved results, use **Clear Scope data on this browser** in Settings. See [Privacy and your data](/chrome/privacy-and-data).
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Nothing is underlined on the planner">
+    Make sure **Schedule Planner insight** is on in **Settings** > **Features**, then reload the planner page. After Scope updates, you may see **Scope was updated — refresh this page to keep using it.** Reload the page.
+  </Accordion>
+  <Accordion title="A card says it couldn't reach a site">
+    **Couldn't reach Rate My Professors.**, **Couldn't reach Reddit.**, and **Couldn't reach the grade archive.** mean that site didn't answer. Check your connection and click **Try again** on the card.
+  </Accordion>
+  <Accordion title="An instructor has no ratings">
+    **No Rate My Professors profile found** means Scope couldn't match the name. Click **Search on RMP →** to search yourself. Names like "Staff" or "TBA" are never looked up.
+  </Accordion>
+  <Accordion title="The week grid says to connect Google">
+    **Connect Google in Scope to see your week.** means Scope can't read your calendar. Sign out of Scope and sign in again with Google, and allow calendar access when Google asks.
+  </Accordion>
+</AccordionGroup>

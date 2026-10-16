@@ -1,0 +1,140 @@
+---
+title: "Use Polya in Claude"
+description: "Connect Polya to Claude so it can search your course materials and follow the study mode you chose for each course."
+sidebarTitle: "Use in Claude"
+---
+
+You can connect Polya to Claude as a connector. Claude can then see the courses you added to Polya, check the study mode you chose for each one, and search your course materials so its explanations cite what your class covers. Once connected, Polya works in Claude on the web, in the desktop app, and on your phone.
+
+## Before you begin
+
+- [Add at least one course to Polya](/polya/add-a-course).
+- [Choose a study mode](/polya/study-modes) for each course. Claude checks it before helping with that course.
+- You need a Claude account. Free Claude accounts can add one custom connector.
+
+<Note>
+Polya isn't in Claude's connector directory yet, so you add it as a custom connector with its address, `https://askpolya.com/mcp`. On a Claude Team or Enterprise plan, an owner of your organization adds custom connectors, and you then connect to them.
+</Note>
+
+## Connect Polya to Claude
+
+<Steps>
+  <Step title="Open Connectors">
+    On [claude.ai](https://claude.ai) or in the Claude desktop app, open **Customize**, then **Connectors**.
+  </Step>
+  <Step title="Add a custom connector">
+    Select **+**, then **Add custom connector**. Name it "Polya" and enter this address:
+
+    ```text
+    https://askpolya.com/mcp
+    ```
+
+    Then select **Add**.
+  </Step>
+  <Step title="Sign in to Polya">
+    If Claude shows **Connect** next to Polya, select it. When asked, sign in to Polya with the same Google account you use on askpolya.com.
+
+    Polya asks whether to connect Claude to Polya. It shows the account you're signed in as and lists what Claude will be able to do.
+  </Step>
+  <Step title="Allow access">
+    Select **Allow**. Polya sends you back to Claude, and the connector is ready.
+
+    To cancel instead, select **Don't allow**.
+  </Step>
+</Steps>
+
+If Polya shows **This link has expired**, go back to Claude and connect Polya again.
+
+### Turn Polya on in a chat
+
+You can choose which connectors a chat uses. In a chat, select **+** at the lower left, then **Connectors**, and make sure **Polya** is turned on.
+
+## Things to ask
+
+Mention the course by name so Claude knows which one to use. For example:
+
+- "What study mode is my Data 100 course in?"
+- "Explain gradient descent the way my Data 100 lectures do."
+- "Quiz me on this week's probability material."
+
+## What Claude can do with Polya
+
+The connector can only read. It can't change anything in Polya or Canvas. Claude can do the following:
+
+| What it can do | Details |
+| --- | --- |
+| List your courses | Names, terms, and whether each course's materials are ready. A course that's still importing shows as still loading. |
+| Read a course's study rules | The study mode you chose, what help it allows, and what it doesn't. |
+| Search a course's materials | Readings, slides, pages, and lecture transcripts. Each result is numbered and says where it came from, like a page number. In Practice mode, search never returns answer keys. |
+
+Claude is told to check a course's study mode again before each new coursework question, to treat each part of a multi-part problem as its own question, and to cite the passages it used, like "Lecture 7, page 2".
+
+<Warning>
+Claude writes its own answers. Polya tells it which study mode you chose, but it can't force Claude to follow it. Treat the study mode as a guide you're choosing to follow. If Claude goes past your mode, ask it to check the course's study rules again.
+</Warning>
+
+Your **Note to the tutor** and your Study tab exams stay in Polya. Claude doesn't see them.
+
+## Messages from Polya in Claude
+
+When something goes wrong, Polya sends Claude a short message. Claude may pass it on in its own words.
+
+| Message | What it means |
+| --- | --- |
+| **No courses yet. The student can add one at askpolya.com.** | Your Polya account has no courses. [Add a course](/polya/add-a-course). |
+| **That course isn't in your Polya account.** | Claude asked for a course you haven't added. Ask it to list your courses first. |
+| **Search is taking a break. Things are busier than usual, so try again in a little while.** | Polya is under heavy use. Everything you've imported is still there. |
+| **Polya's search limit for now has been reached. Try again later.** | You've searched many times in a short period. Wait, then try again. |
+| **That search couldn't run. Keep the question under 2,000 characters.** | Ask a shorter question. |
+
+## Disconnect Polya
+
+<Steps>
+  <Step title="Open Connectors">
+    In Claude, open **Customize**, then **Connectors**.
+  </Step>
+  <Step title="Remove Polya">
+    Next to Polya, select **Remove**, or select the three dots and remove it. Follow the prompts.
+  </Step>
+</Steps>
+
+Disconnecting doesn't change anything in Polya.
+
+## Use Polya in Claude Code
+
+If you use Claude Code, you can install Polya as a plugin. The plugin adds the same three read-only abilities, plus instructions that tell Claude Code to check a course's study rules before it helps with coursework.
+
+<Steps>
+  <Step title="Add the Polya plugin source">
+    In a terminal, run:
+
+    ```bash
+    claude plugin marketplace add hqscope/polya-plugin
+    ```
+  </Step>
+  <Step title="Install the plugin">
+    Run:
+
+    ```bash
+    claude plugin install polya@polya
+    ```
+  </Step>
+  <Step title="Sign in to Polya">
+    Start Claude Code and run `/mcp`. Select **polya** and choose to authenticate. In the browser window that opens, sign in with the Google account you use on askpolya.com, then select **Allow**.
+  </Step>
+</Steps>
+
+## Privacy
+
+Claude sees the names of your courses, each course's study mode, and passages from your materials when you ask about a course. Polya receives only what Claude sends to look something up, like which course and what to search for. Polya never receives your Claude chat history. What you say in Claude is covered by Anthropic's privacy policy. To learn more, see [Privacy and data](/polya/privacy-and-data#chatgpt-and-claude).
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Use Polya in ChatGPT" icon="plug" href="/polya/chatgpt">
+    Connect Polya to ChatGPT.
+  </Card>
+  <Card title="Study modes" icon="sliders" href="/polya/study-modes">
+    What each mode allows.
+  </Card>
+</CardGroup>

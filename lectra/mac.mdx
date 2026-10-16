@@ -1,0 +1,157 @@
+---
+title: "Lectra for Mac"
+description: "Install the free Mac app that lets Lectra on your iPad see and control your Mac, send files to it, and share a clipboard with it."
+sidebarTitle: "Lectra for Mac"
+---
+
+Lectra for Mac is a free app that connects your Mac to Lectra on your iPad. With it installed, you can open your Mac's screen on your iPad, control it with touch or a keyboard, send files from your iPad to the Mac, and copy text between the two. It runs in the menu bar, where it appears as **Lectra Receiver**.
+
+<Note>
+  Today the Mac app is a companion for Lectra on your iPad. It doesn't open, mark up, or store documents, and it doesn't include notebooks, Python, or the terminal. Use Lectra on your iPad for those.
+
+  The Chrome extension named Lectra Receiver is a different app. To learn about it, see [Lectra Receiver for Chrome](/lectra/receiver).
+</Note>
+
+## Before you begin
+
+- A Mac with macOS 13 Ventura or later. Both Apple silicon and Intel Macs work.
+- Lectra on your iPad. To get it, see [Install Lectra](/lectra/install).
+- A Lectra account that you sign in to with Google. The Mac app signs in with Google only, so use the same Google account on your iPad and your Mac. If you signed in to Lectra on your iPad with Apple, the Mac app can't reach that account yet. To learn about accounts, see [Your Scope account](/get-started/account).
+
+## Install Lectra for Mac
+
+<Steps>
+  <Step title="Download the app">
+    On your Mac, go to [canvascope.org/mac](https://canvascope.org/mac), and then click **Download for Mac**. The download is a disk image file that ends in `.dmg`. It's signed and notarized by Apple, and it isn't on the Mac App Store.
+  </Step>
+  <Step title="Move it to Applications">
+    Open the `.dmg` file from your **Downloads** folder. In the window that opens, drag **Lectra Receiver** into your **Applications** folder.
+  </Step>
+  <Step title="Open it">
+    Open **Lectra Receiver** from your Applications folder. If macOS asks whether you're sure you want to open an app downloaded from the internet, click **Open**. The app has no window or Dock icon. Its icon appears in the menu bar at the top of your screen.
+  </Step>
+  <Step title="Sign in">
+    Click the Lectra Receiver icon in the menu bar, and then click **Sign In**. Choose the same Google account that you use for Lectra on your iPad.
+  </Step>
+  <Step title="Allow screen and control access">
+    The menu shows two permissions: **Screen Recording** and **Accessibility**. Click **Grant** next to each one. macOS opens **System Settings** > **Privacy & Security**. Turn on **Lectra Receiver** in each list.
+  </Step>
+  <Step title="Reopen the app if it asks">
+    macOS applies these permissions only after the app restarts. If the menu shows **Enabled it? Quit & Reopen to finish**, click it.
+  </Step>
+</Steps>
+
+When setup is complete, the menu shows **Ready** and says that your Mac is reachable from your iPad. To connect from your iPad, see [Remote Desktop](/lectra/remote-desktop).
+
+### Why the app needs these permissions
+
+macOS doesn't let any app show or control your screen without your approval.
+
+| Permission | What it allows |
+|---|---|
+| **Screen Recording** | Lets your iPad see this Mac's screen. |
+| **Accessibility** | Lets your iPad type and click on this Mac. |
+
+Your iPad can't control the Mac until both are on.
+
+## Use the menu bar app
+
+Click the Lectra Receiver icon in the menu bar to see its status and controls. A colored dot shows the status at a glance.
+
+| Status | What it means |
+|---|---|
+| **Signed out** | Sign in so your iPad can find this Mac. |
+| **Action needed** | One or both permissions are off. Grant them in the menu. |
+| **Ready** | Your iPad can open this Mac. |
+| **Connecting…** | The app is getting ready for your iPad. |
+| **Sharing paused** | You turned off **Share this Mac**. Your iPad can't reach the Mac until you turn it back on. |
+| **Connected** | Your iPad is controlling this Mac. The device's name follows the status. |
+
+The menu also has these controls:
+
+- **Share this Mac**: turn this off to stop your iPad from reaching the Mac. Turn it on again when you want access.
+- **Disconnect**: appears while your iPad is connected. Click it to end the session from the Mac.
+- **Settings…**: opens the app's settings.
+- **Check for Updates…**: checks for a newer version of the app and installs it.
+- **Quit**: closes the app. Your iPad can't reach the Mac until you open it again.
+
+## Change settings
+
+To open settings, click the Lectra Receiver icon in the menu bar, and then click **Settings…**.
+
+### General
+
+- **Name**: how this Mac appears on your iPad. Change it if you have more than one Mac.
+- **Open at login**: starts the app when you log in to your Mac, so your iPad can always reach it.
+- **Stay ready for your iPad**: keeps this Mac reachable while it's plugged in, even after the screen turns off.
+
+### Account
+
+Shows the account you're signed in with, and a **Sign Out** button.
+
+### Permissions
+
+Shows whether **Screen Recording** and **Accessibility** are on, with a **Grant** button for any that are off.
+
+### Transfers
+
+Shows where files that you send from your iPad are saved. By default, they go to a folder named **Lectra** in your **Downloads** folder. To choose another folder, click **Change…**.
+
+## Wake your Mac from your iPad
+
+Your iPad can wake a sleeping Mac so you can connect to it. The **General** tab of the app's settings tells you which kind of wake works on your Mac:
+
+- **From anywhere**: works when you allow notifications for Lectra Receiver. A Mac that has been asleep for a long time, or a laptop on battery with the lid closed, still has to be woken by hand.
+- **On the same Wi-Fi only**: your iPad can wake the Mac when both are on the same network. To wake it from anywhere, allow notifications for Lectra Receiver in **System Settings** > **Notifications**.
+- **Can't wake**: your iPad can't wake the Mac once it sleeps. Turn on **Wake for network access** in **System Settings**, and allow notifications for Lectra Receiver. The app's **Open System Settings…** button takes you to the right place.
+
+<Tip>
+  On a MacBook, **Wake for network access** is under **System Settings** > **Battery** > **Options**. On a desktop Mac, it's under **System Settings** > **Energy**.
+</Tip>
+
+## Uninstall Lectra for Mac
+
+<Steps>
+  <Step title="Quit the app">
+    Click the Lectra Receiver icon in the menu bar, and then click **Quit**.
+  </Step>
+  <Step title="Delete it">
+    In your Applications folder, drag **Lectra Receiver** to the Trash.
+  </Step>
+  <Step title="Remove its permissions (optional)">
+    In **System Settings** > **Privacy & Security**, open **Screen Recording** and **Accessibility**, and remove **Lectra Receiver** from each list.
+  </Step>
+</Steps>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="I turned on the permissions, but the app still says Action needed">
+    macOS sometimes keeps an out-of-date approval. In the menu, click **Already switched on? Reset & try again**. The app clears the old approval and reopens. Approve it once more in System Settings.
+  </Accordion>
+  <Accordion title="My Mac doesn't appear on my iPad">
+    Check these on the Mac:
+    - The app is open, and its menu says **Ready**.
+    - **Share this Mac** is on.
+    - The account shown in **Settings…** > **Account** is the same account you use in Lectra on your iPad.
+  </Accordion>
+  <Accordion title="My iPad can't reach the Mac when it's asleep">
+    Open **Settings…** > **General** and read the note under **Stay ready for your iPad**. Follow it to turn on **Wake for network access** and allow notifications. Keep the Mac plugged in for the most reliable wake.
+  </Accordion>
+  <Accordion title="Where did the files I sent from my iPad go?">
+    They're in the **Lectra** folder inside **Downloads**, unless you chose another folder in **Settings…** > **Transfers**.
+  </Accordion>
+</AccordionGroup>
+
+If you still need help, see [Get help](/resources/get-help).
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Remote Desktop" icon="display" href="/lectra/remote-desktop">
+    Open and control your Mac from your iPad.
+  </Card>
+  <Card title="Send files between devices" icon="arrow-right-arrow-left" href="/lectra/send-between-devices">
+    Every way to move files between Chrome, your iPad, and your Mac.
+  </Card>
+</CardGroup>

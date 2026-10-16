@@ -1,0 +1,166 @@
+---
+title: "Backups"
+description: "Learn what Lectra backs up when you sign in, what stays only on your iPad, and how to get your documents back."
+sidebarTitle: "Backups"
+---
+
+Lectra keeps your documents on your iPad. When you sign in, it also backs up a copy of each document's pages to your account, with your markup on them. Your handwriting stays editable only on the iPad where you wrote it. This page explains what that means, how to check a document's backup, and how to get your work back.
+
+<Info>
+  Lectra backs up your pages. It doesn't sync documents between devices. If you open a backed-up document on another iPad, your handwriting is part of the page there, and you can't edit or erase it.
+</Info>
+
+## What's backed up
+
+Backups happen only when you're signed in.
+
+| Item | Backed up |
+|---|---|
+| The file you imported | Yes, once, when you add it. |
+| Your pages with markup (handwriting, highlights, text boxes, and images on the page) | Yes, as a flat copy of the pages. |
+| Handwriting, text boxes, and images as things you can still edit | No. They stay on this iPad. |
+| Lecture recordings | No. To learn more, see [Record lectures](/lectra/record-lectures). |
+| Version history | No. It stays on this iPad. |
+| Documents larger than 50 MB | No. They stay on this iPad. |
+
+If you use Lectra without an account, nothing leaves your iPad.
+
+### When Lectra backs up
+
+Lectra backs up a document's pages after the document saves. That happens when you:
+
+- Tap **Back** to leave the document.
+- Share, print, or send the document to Scope.
+- Open Lectra or return to it. Lectra checks for documents that changed and backs them up.
+
+Lectra doesn't back up while you're writing. If you're offline, the backup waits and goes through when you're connected.
+
+## Check a document's backup status
+
+In list view, each document shows its backup status. In grid view, the status appears as a small icon on the thumbnail. With VoiceOver, it's read as **Backup status**.
+
+| Status | What it means |
+|---|---|
+| No status | The document is kept on this iPad and hasn't been backed up. |
+| **Saving** | Lectra is saving the document to this iPad. |
+| **Queued** | Waiting to back up a copy of the pages. |
+| **Backing up** | A copy of the pages is being backed up. |
+| **Backed up** | A copy of the pages is backed up. Your handwriting stays on this iPad. |
+| **Retry** | The document is saved on this iPad, but the backup didn't go through. |
+| **Not backed up** | Your backup storage is full, so this document exists only on this iPad for now. |
+
+When a backup finishes, the library briefly shows **Backed up**.
+
+### If a backup fails
+
+Your document is always saved on your iPad first, so a failed backup doesn't lose any work. Lectra tries again on its own several times over about half an hour. If it still can't, the status says Lectra couldn't back up a copy after several tries.
+
+To try again yourself, tap **Retry** on the document.
+
+## Backup storage
+
+Your account has a limited amount of backup storage. To see how much you've used and which documents take the most space, go to **Settings** > **Storage**. To learn more, see [Settings](/lectra/settings#storage).
+
+When your backup storage is full, the library shows **Lectra storage is full**. Your documents are safe on this iPad. New changes stay on the iPad and back up on their own once there's room. Tap **Manage Storage** to open **Settings** > **Storage**.
+
+To make room, delete documents you no longer need. Deleted documents leave your backup when they're removed from **Recently Deleted**.
+
+## Open your documents on another iPad
+
+<Steps>
+  <Step title="Install Lectra">
+    Install Lectra on the other iPad. To learn how, see [Install Lectra](/lectra/install).
+  </Step>
+  <Step title="Sign in with the same account">
+    On the sign-in screen, choose the same Google or Apple account you used before.
+  </Step>
+  <Step title="Open a document">
+    Your backed-up documents appear in the library, marked **Not downloaded**. Tap one to download it.
+  </Step>
+</Steps>
+
+The downloaded document has your markup on its pages, but your earlier handwriting can't be erased or moved. You can write new notes on top. Documents that weren't backed up, such as ones larger than 50 MB, don't appear.
+
+<Tip>
+  To move a document to another iPad with your handwriting still editable, share it as a **Lectra Document** and open it on the other iPad. To learn how, see [Export and share](/lectra/export-and-share#share-a-document).
+</Tip>
+
+## Your iPad's own backup
+
+Lectra stores your documents in its own space on your iPad. When iPadOS backs up your iPad to iCloud or to a computer, that backup includes your Lectra documents. If you restore your iPad from that backup, your documents come back as they were. Lecture recordings are left out of your iPad's backup so they don't fill your iCloud storage.
+
+## Sign out
+
+When you sign out, your documents stay on this iPad and backups pause. Sign in again to back up new changes. To learn how, see [Install Lectra](/lectra/install#sign-out).
+
+## Switch accounts on one iPad
+
+The first account you sign in with takes ownership of the documents already on the iPad.
+
+If you later sign in with a different account, Lectra doesn't delete the earlier account's documents. It sets them aside, untouched, and tells you once how many it set aside. When the earlier account signs in again, its documents come back.
+
+To export or delete documents that were set aside:
+
+<Steps>
+  <Step title="Open Cloud & Backup">
+    Go to **Settings** > **Cloud & Backup**.
+  </Step>
+  <Step title="Find the Set aside card">
+    The **Set aside** card lists each group of documents with the date they were set aside.
+  </Step>
+  <Step title="Choose what to do">
+    Tap **Export** to save the documents as Lectra files that keep your handwriting editable. Tap **Delete** to remove them for good, then tap **Delete** again to confirm. To keep them, tap **Keep**.
+  </Step>
+</Steps>
+
+## Recovery snapshots
+
+A recovery snapshot is a copy of every document in your library as a PDF, saved at a moment you choose. It's an extra safety net, separate from your account backup. You don't need an account to use it.
+
+### Make a snapshot
+
+Go to **Settings** > **Cloud & Backup** and tap **Backup Now**. You see **Backup saved to On Device.** Snapshots are stored on this iPad.
+
+<Note>
+  A snapshot holds each document's pages with your markup flattened onto them, plus your document titles, folders, and favorites. It doesn't hold editable handwriting or recordings. Snapshots aren't included in your iPad's own backup.
+</Note>
+
+### Restore from a snapshot
+
+<Steps>
+  <Step title="Open Recovery Center">
+    Go to **Settings** > **Cloud & Backup** and scroll to **Recovery Center**. It lists your snapshots, newest first, with the number of documents in each.
+  </Step>
+  <Step title="Restore">
+    Tap **Restore Copy** to add each document from the snapshot as a new document, with "Restored" after its title. Your current documents don't change.
+  </Step>
+</Steps>
+
+The restored pages have your markup on them, but the handwriting can't be edited.
+
+**Replace Current** replaces the pages of each matching document with the snapshot's pages instead of adding copies. The handwriting you have on those documents now isn't removed. Lectra doesn't ask you to confirm, so use **Restore Copy** unless you're sure.
+
+### Keep snapshots in iCloud Drive
+
+If you turn on **Cloud Sync** in **Settings** > **Cloud & Backup**, Lectra also copies a PDF of each document to iCloud Drive, and each snapshot is saved to iCloud Drive as well as this iPad. You need to be signed in to iCloud with iCloud Drive turned on. Snapshots saved there appear in **Recovery Center** with an **iCloud Drive** label.
+
+With **Cloud Sync** on, **Automatic Backup** makes a snapshot each time Lectra copies your documents to iCloud Drive, such as when you open Lectra. To learn more, see [Settings](/lectra/settings#cloud-and-backup).
+
+<Note>
+  **Cloud Sync** copies PDFs only. It doesn't sync your handwriting between devices, and the copies count toward your iCloud storage.
+</Note>
+
+## Delete your account and backups
+
+To delete your account and everything backed up to it, go to **Settings** > **Account** and tap **Delete Account**. You can keep the documents on your iPad or delete them too. To learn more, see [Delete your account](/get-started/delete-your-account).
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Version history" icon="clock-rotate-left" href="/lectra/version-history">
+    Go back to an earlier version of your handwriting.
+  </Card>
+  <Card title="Privacy" icon="shield" href="/get-started/privacy">
+    How Scope handles your data.
+  </Card>
+</CardGroup>

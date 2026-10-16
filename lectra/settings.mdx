@@ -1,0 +1,128 @@
+---
+title: "Settings"
+description: "What every Lectra setting does, from your account and backups to storage, notifications, and your app icon."
+sidebarTitle: "Settings"
+---
+
+Lectra's Settings has five tabs: **Account**, **Intelligence**, **Cloud & Backup**, **Storage**, and **App**. Apple Pencil and finger-drawing settings are in the editor instead. This page describes every setting, in the order it appears.
+
+## Open Settings
+
+- **If you're signed in**: in the library, tap your profile picture. It's next to **Lectra** at the top of the sidebar, or at the top right on a narrow window.
+- **With a keyboard**: press <kbd>⌘</kbd> <kbd>,</kbd> from anywhere in Lectra.
+
+If you aren't signed in, the profile button opens the sign-in screen instead. To reach Settings without signing in, press <kbd>⌘</kbd> <kbd>,</kbd> on a hardware keyboard.
+
+On a wide screen, the tabs are listed on the left. On a narrow screen, they're in a row across the top. Tap **Done** to close Settings.
+
+## Account
+
+| Setting | What it does |
+|---|---|
+| Profile | Shows your name, email, and **Signed in to Lectra** or **No account**. |
+| **Sign Out of Lectra** | Signs out this iPad. Your documents stay on it. Shown when you're signed in. |
+| **Sign In to Lectra** | Opens sign-in. Shown when you aren't signed in. |
+| **Connect Canvas** | Connects your Canvas account to Scope. Shown when you're signed in. To learn more, see [Connect Canvas](#connect-canvas). |
+| **Remote Desktop** | Connects to your Mac. Shown here only on a narrow screen, where the sidebar is hidden. To learn more, see [Remote Desktop](/lectra/remote-desktop). |
+| **Enable saved signatures** | Lets Lectra offer to keep a signature you draw so you can reuse it on future PDFs. On by default. To learn more, see [Sign a document](/lectra/annotate#sign-a-document). |
+| **Privacy Policy** and **Support** | Open the Scope privacy policy and support site. |
+| **Delete Account** | Deletes your account and everything backed up to it. Shown when you're signed in. To learn more, see [Delete your account](/get-started/delete-your-account). |
+
+### Connect Canvas
+
+This connection is shared with the Scope extension. It lets Scope check what's due, module pages, and files for you, even when Canvas isn't open. Lectra itself doesn't use it for your documents.
+
+<Steps>
+  <Step title="Create a token in Canvas">
+    In Canvas, go to **Account** > **Settings**. Under **Approved Integrations**, choose **+ New Access Token**. Name it "Scope", pick an expiry if you like, and choose **Generate Token**. Copy the token.
+  </Step>
+  <Step title="Enter it in Lectra">
+    In **Settings** > **Account** > **Connect Canvas**, enter your school's Canvas address in **Canvas address**, such as `school.instructure.com`. Paste the token in **Access token**.
+  </Step>
+  <Step title="Connect">
+    Tap **Connect**. When it works, you see **Connected**.
+  </Step>
+</Steps>
+
+To disconnect, tap **Disconnect**. Scope forgets your token. You can also delete the token in Canvas under **Approved Integrations**.
+
+<Note>
+  Some schools don't let students create access tokens. If you don't see the option in Canvas, skip this. Scope keeps working with the Canvas pages you open. To learn more, see [Connect your courses](/chrome/connect-your-courses).
+</Note>
+
+## Intelligence
+
+This tab turns Lectra's study tools on or off and shows what they did.
+
+- The switch turns intelligence **On** or **Off**. It's off until you turn it on, either here or the first time you open a study tool.
+- **WHAT YOU CAN DO** lists the study tools: **Summarize**, **Ask this document**, **Flashcards**, and **Practice quiz**.
+- **RECENT ACTIVITY** lists each time a study tool ran in the last 30 days: what it was, which document, and that it ran on this device. To clear the list, tap **Clear**.
+
+On an iPad that can't run Apple Intelligence, the tab explains why, for example **Not available on this device** or **Turn on Apple Intelligence**, and has no switch.
+
+To learn more, see [Apple Intelligence](/lectra/apple-intelligence).
+
+## Cloud and backup
+
+The **Cloud & Backup** tab holds extra ways to protect your documents beyond your account backup. To learn how account backups work, see [Backups](/lectra/backups).
+
+| Setting | What it does |
+|---|---|
+| **Status** | Shows whether iCloud is **Available**, when Lectra last copied to iCloud Drive (**Last Sync**), and when it last made a snapshot (**Last Backup**). |
+| **Sync Now** | Copies your documents to iCloud Drive now. Needs **Cloud Sync** on. |
+| **Backup Now** | Saves a recovery snapshot of your whole library. To learn more, see [Recovery snapshots](/lectra/backups#recovery-snapshots). |
+| **Cloud Sync** | Copies a PDF of each document to iCloud Drive and saves snapshots there too. Off by default. Needs iCloud Drive turned on for your Apple Account. It doesn't sync handwriting between devices. |
+| **Automatic Backup** | Makes a snapshot after each copy to iCloud Drive. On by default. It has an effect only when **Cloud Sync** is on. |
+| **Downloads** | Sets when Lectra removes downloads to save space. See the next section. |
+| **Set aside** | Appears only if documents from a different account were set aside on this iPad. Tap **Export** or **Delete**. To learn more, see [Switch accounts on one iPad](/lectra/backups#switch-accounts-on-one-ipad). |
+| **Recovery Center** | Lists your snapshots. Tap **Restore Copy** or **Replace Current**. Tap **Reload** to refresh the list. |
+
+### Downloads
+
+When you're signed in, Lectra can remove documents you haven't opened in a while from this iPad to save room. They stay backed up and download again when you open them.
+
+- **Keep Downloaded For**: choose **7 days**, **30 days**, **90 days**, or **Always**. Lectra starts removing downloads on its own only after you choose one of the day options here. With **Always**, nothing is removed on its own.
+- **Free Up Space Now**: removes downloads right away, following the same rules.
+
+Lectra never removes a document that isn't backed up, that has handwriting only on this iPad, that has changes waiting to back up, or that's open. To keep a specific document, tap its **…** button in the library and tap **Keep on This Device**.
+
+## Storage
+
+The **Storage** tab shows what's backed up, what's on this iPad, and how much room is left. It needs you to be signed in and online. Otherwise, it says storage details aren't available right now.
+
+| Section | What it shows |
+|---|---|
+| Top of the tab | How much of your backup storage you've used, plus **On This iPad** and **Backed Up** totals. When your backup storage is full, it says new documents stay on this iPad until there's room. |
+| **By Kind, On This iPad** | Space used by **Originals**, **Annotated Copies**, **Notebooks**, **Recordings**, and **Other**. |
+| **By Course** | Space used by each course, on this iPad and backed up. Documents without a course are under **No course**. |
+| **By Document** | Your largest documents, sorted by **Size** or **Name**. Tap **Remove Download** to remove a backed-up document from this iPad, or **Move to Recently Deleted** to delete it. |
+| **Not Backed Up** | Documents that exist only on this iPad. They back up on their own once they can. |
+| **Free Up Space** | Tap **Free Up Space on This iPad** to remove downloads of your largest backed-up documents. Documents that aren't backed up are never removed. |
+
+## App
+
+| Setting | What it does |
+|---|---|
+| **Move the toolbar aside while you write** | Folds the toolbar into a small circle in the corner when you start a mark. Tap the circle to bring it back. On by default. |
+| **Notifications** | Shows whether Lectra can send you notifications. Tap **Allow Notifications** to turn them on, or **Open Settings** if you turned them off in iPadOS. |
+| **Open files from Scope automatically** | Opens a file from Scope as soon as it arrives while you're browsing your library. While you're writing, the file waits for a tap. Off by default. |
+| **Notify Me About New Files** | Lets Lectra tell you when a file from Scope arrives while Lectra is closed. |
+| **Daily reminder** | Sends a daily "Study time" reminder. When it's on, choose the **Time**. The default is 5:00 PM. Off by default. |
+| **App Icon** | Changes the Lectra icon on your Home Screen: **Lectra Ink** (the default), **Midnight**, **Paper**, or **Highlighter**. |
+| **Siri & Shortcuts** | Shows what you can ask Siri, such as "Start a new notebook in Lectra". |
+| **What's New** | Tap **See what's new in Lectra** to see the latest changes. |
+
+## Pencil and input
+
+Apple Pencil and finger-drawing settings are in the editor. Open a document, tap **More actions** (the ellipsis button), then tap **Pencil & Input**. To learn what each option does, see [Use Apple Pencil](/lectra/apple-pencil).
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Backups" icon="cloud-arrow-up" href="/lectra/backups">
+    What's backed up and how to restore it.
+  </Card>
+  <Card title="Your Scope account" icon="user" href="/get-started/account">
+    Sign in, sign out, and manage your account.
+  </Card>
+</CardGroup>

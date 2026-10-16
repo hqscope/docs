@@ -1,0 +1,134 @@
+---
+title: "Run Python"
+description: "Run Python 3.12 on your iPad in notebooks and the terminal, with NumPy, pandas, Matplotlib, and Pillow included."
+sidebarTitle: "Python"
+---
+
+Lectra runs Python on your iPad, so you can work through a problem set or analyze data next to your readings. Python comes with NumPy, pandas, Matplotlib, and Pillow. After a one-time download, it runs without an internet connection.
+
+## Before you begin
+
+- **The first time you run Python**, your iPad needs an internet connection. Lectra downloads Python once, about 70 MB. After that, Python works offline.
+- **To install extra packages**, you need an internet connection each time you install one.
+
+## Where you can run Python
+
+| Where | Best for | How to start |
+|---|---|---|
+| A Jupyter notebook | Step-by-step work with charts and notes | In your library, tap **Projects** > **New** > **Python Notebook**. To learn more, see [Use Jupyter notebooks](/lectra/jupyter-notebooks). |
+| Interactive Python in the terminal | Trying out a few lines | In a terminal, type `python`, and then press Return. Type `exit()` to leave. |
+| A script in a project | Running a `.py` file | Open the project's terminal, and then type `python` followed by the file name, such as `python simulate.py`. |
+
+There's no Run button for `.py` files in the code editor. Run scripts from the project's terminal. To learn more, see [Use the terminal](/lectra/terminal) and [Use the code editor](/lectra/code-editor).
+
+## The first run
+
+The first time you run code, Lectra gets Python ready. A notebook shows the progress at the top:
+
+1. **Downloading Python…** with a percentage, the first time only.
+2. **Starting Python…**
+3. **Python ready**
+
+If your iPad is offline during the first run, the cell shows "Python couldn't start: it needs a one-time download to finish setting up, and the network isn't reachable right now." Connect to the internet, and then run the cell again.
+
+<Note>
+  If your iPad runs low on storage, iPadOS can remove the Python download to free up space. Lectra downloads it again the next time you run Python.
+</Note>
+
+## Included packages
+
+Lectra includes Python 3.12 and these packages. You can import them without installing anything.
+
+| Package | Version | Use it for |
+|---|---|---|
+| `numpy` | 1.26.4 | Arrays, linear algebra, and math |
+| `pandas` | 2.2.0 | Tables of data (DataFrames) and CSV files |
+| `matplotlib` | 3.5.2 | Charts and plots |
+| `pillow` | 10.2.0 | Opening and editing images |
+| `python-dateutil` | 2.9.0 | Working with dates |
+| `pytz` | 2024.1 | Time zones |
+
+Lectra also includes the packages these depend on, such as `six`, `cycler`, `fonttools`, `kiwisolver`, `pyparsing`, and `packaging`.
+
+## Install more packages
+
+You can add packages from PyPI, the public Python package index, while your iPad is online. After you install a package, it stays on your iPad and works offline.
+
+<Tabs>
+  <Tab title="From a notebook cell">
+    When a cell imports a package that isn't installed, Lectra asks **Install "package"?** and offers to download it from PyPI. Tap **Install**.
+  </Tab>
+  <Tab title="From the Packages sheet">
+    <Steps>
+      <Step title="Open Manage Packages">
+        In a notebook, tap **More** (the three dots), and then tap **Manage Packages**.
+      </Step>
+      <Step title="Install">
+        Type a name in **Package name**, such as `seaborn`, and then tap **Install**.
+      </Step>
+    </Steps>
+    The sheet lists your packages under **Installed from PyPI** and the included ones under **Built in**.
+  </Tab>
+  <Tab title="From the terminal">
+    Type `pip install` followed by the package name, such as `pip install seaborn`. Type `pip list` to see what's installed.
+  </Tab>
+</Tabs>
+
+<Note>
+  You can install packages written only in Python. Packages that need compiled code, such as SciPy and scikit-learn, aren't available on the iPad.
+</Note>
+
+## Work with files
+
+- **In a notebook**, use **Data** to bring in a CSV, TSV, or text file. To learn how, see [Use Jupyter notebooks](/lectra/jupyter-notebooks#load-a-data-file).
+- **In a script**, Python can read the text files in the folder you run it from, such as `.py`, `.csv`, `.json`, `.txt`, and `.md` files. It reads up to 400 files and 8 MB in total, and skips any file larger than 1 MB.
+
+<Warning>
+  Files that Python creates, such as a CSV you write or a chart you save with `savefig()`, aren't saved to your project or your library. In a notebook, charts appear below the cell instead. Copy any results you need before you close the notebook or terminal.
+</Warning>
+
+## Stop or restart Python
+
+- **In a notebook**, tap **More** > **Restart Kernel**. This stops a running cell, or clears all your variables if nothing is running.
+- **In the terminal**, a running command finishes on its own. Pressing <kbd>Control</kbd> <kbd>C</kbd> doesn't stop it.
+
+If a single run takes longer than 3 minutes, Lectra stops waiting and shows "Python stopped responding". If your iPad needs memory back, it can close Python and Lectra shows "The Python kernel was reclaimed by the system. Run it again to restart."
+
+## Limits
+
+Python runs inside Lectra on your iPad, so some things that work on a computer don't work here:
+
+- Code that opens network connections, starts threads, or runs other programs doesn't work.
+- The `sqlite3`, `ssl`, and `lzma` modules aren't available.
+- In a notebook, `input()` doesn't ask you for text. It returns an empty string. In the terminal, `input()` works.
+- Files that Python writes aren't kept, as described in [Work with files](#work-with-files).
+
+If you need a full Python setup, you can connect to another computer over SSH from the terminal. To learn how, see [Use the terminal](/lectra/terminal#connect-to-another-computer-with-ssh).
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="The notebook stays on Starting Python…">
+    Python may still need its one-time download. Connect to the internet, and then run the cell again.
+  </Accordion>
+  <Accordion title="ModuleNotFoundError for a package">
+    The package isn't installed. Install it as described in [Install more packages](#install-more-packages). If it needs compiled code, it isn't available on the iPad.
+  </Accordion>
+  <Accordion title="“Python stopped responding”">
+    The run took longer than 3 minutes, or Lectra was in the background for a while. Run it again. For long work, split it into smaller steps.
+  </Accordion>
+  <Accordion title="The file my script saved isn't there">
+    Files that Python writes aren't kept. Print the results instead, or, in a notebook, show charts below the cell.
+  </Accordion>
+</AccordionGroup>
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Use Jupyter notebooks" icon="book-open" href="/lectra/jupyter-notebooks">
+    Create, open, and run `.ipynb` notebooks.
+  </Card>
+  <Card title="Use the terminal" icon="terminal" href="/lectra/terminal">
+    Run scripts and use the built-in shell.
+  </Card>
+</CardGroup>

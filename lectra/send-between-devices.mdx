@@ -1,0 +1,146 @@
+---
+title: "Send files between devices"
+description: "Move PDFs between Chrome, Lectra on your iPad, another iPad, and your Mac, and share a clipboard with your Mac."
+sidebarTitle: "Send between devices"
+---
+
+Lectra can send a document from your iPad to your computer's browser, to another iPad, or to your Mac, and bring PDFs from Chrome to your iPad. Every transfer is something you start on purpose. Lectra doesn't keep your libraries in step across devices, so a document you send is a copy.
+
+## Before you begin
+
+- Sign in to the same Lectra account on every device you send between. To learn about accounts, see [Your Scope account](/get-started/account).
+- Make sure each device has an internet connection.
+
+## Ways to send
+
+| From | To | How |
+|---|---|---|
+| Chrome | iPad | Send a PDF from Chrome with the Scope extension or Lectra Receiver. |
+| iPad | Chrome | In a document, tap **Export to Scope**. The PDF downloads in Chrome. |
+| iPad | Another iPad | In a document, tap **Export to Scope**, and then choose the other iPad. |
+| iPad | Mac | During a Remote Desktop session, send a file to the Mac. |
+| iPad and Mac | Each other | Copy and paste during a Remote Desktop session. |
+
+The following sections explain each one.
+
+## Send a PDF from Chrome to your iPad
+
+You can send PDFs from Chrome with either of two Chrome extensions:
+
+- **The Scope extension**: sends files from your courses and from any PDF. To learn how, see [Send files from Chrome to your iPad](/chrome/send-to-ipad).
+- **Lectra Receiver**: a smaller extension that adds a **Send to Lectra** button to any PDF. To learn how, see [Lectra Receiver for Chrome](/lectra/receiver).
+
+If you install both, Lectra Receiver's **Send to Lectra** button takes the place of the Scope extension's on website PDFs.
+
+On your iPad, files from Chrome arrive in the **Scope Inbox** in your library. If Lectra is open, a message says the file arrived, with an **Open** button.
+
+### Open arrivals automatically
+
+You can have Lectra open a file the moment it arrives.
+
+<Steps>
+  <Step title="Open Settings">
+    Open Lectra's **Settings**, and then tap **App**. To learn how to open Settings, see [Settings](/lectra/settings).
+  </Step>
+  <Step title="Turn on automatic opening">
+    Under **Files from Scope**, turn on **Open files from Scope automatically**.
+  </Step>
+</Steps>
+
+A file that arrives while you're browsing your library opens right away. While you're writing in a document, it waits for a tap instead.
+
+To get a notification when a file arrives while Lectra is closed, allow notifications for Lectra when it asks, or turn them on in your iPad's **Settings** app.
+
+## Send a document from your iPad
+
+Lectra sends the document as a PDF with your markup on the pages.
+
+<Steps>
+  <Step title="Open the document">
+    In Lectra, open the document you want to send.
+  </Step>
+  <Step title="Tap Export to Scope">
+    Tap the document's name at the top of the screen, and then tap **Export to Scope**. You can also find **Export to Scope** in **More actions** (the three dots).
+  </Step>
+  <Step title="Choose where to send it">
+    If you have more than one place to send to, Lectra shows a **Send to** list. Each destination shows **Ready**, or when it was last open. Tap the one you want. If you have only one destination, Lectra sends to it without asking.
+  </Step>
+  <Step title="Wait for the confirmation">
+    Lectra shows "Sending to" followed by the destination's name, and then "Sent to" when the document is on its way.
+  </Step>
+</Steps>
+
+What happens next depends on where you sent it:
+
+| Destination | What you see there |
+|---|---|
+| A browser, such as **Chrome + macOS** | The PDF downloads to the computer's **Downloads** folder, through the Scope extension or Lectra Receiver. Chrome doesn't show a separate notification. Lectra on your iPad confirms when it has downloaded. |
+| Another iPad | Lectra on that iPad asks where to add the document, in **Add to Lectra**. |
+
+A destination that isn't open right now still works. The document waits, and arrives when that device next opens Lectra, Chrome, or the extension. In the **Send to** list, such a destination shows "Will arrive when it next opens" or when it was last open.
+
+<Note>
+  You can send documents up to 25 MB. A browser appears in the **Send to** list only while the Scope extension or Lectra Receiver is signed in to your account in that browser.
+</Note>
+
+## Send a file to your Mac
+
+You send files to your Mac during a Remote Desktop session. You need [Lectra for Mac](/lectra/mac) installed and set up.
+
+<Steps>
+  <Step title="Connect to your Mac">
+    In Lectra, open **Remote Desktop**, and then tap **Connect** next to your Mac. To learn more, see [Use Remote Desktop](/lectra/remote-desktop).
+  </Step>
+  <Step title="Tap Send files">
+    In the control bar, tap **Send files**. On a narrow screen, it's under **More**.
+  </Step>
+  <Step title="Choose a file">
+    In **Send to your Mac**, tap **Photos**, **Camera**, or **Files**, and then pick one item.
+  </Step>
+</Steps>
+
+The file lands in the **Lectra** folder in your Mac's **Downloads** folder. To send a Lectra document with your markup, export it to the Files app first, and then send it from **Files**. To learn how to export, see [Export and share](/lectra/export-and-share).
+
+<Note>
+  Keep Lectra open until the file finishes sending. Leaving Lectra or disconnecting cancels it. Lectra for Mac can't send files back to your iPad. To move a file from your Mac to your iPad, use AirDrop or the Files app, and then add it to Lectra. To learn how, see [Import documents](/lectra/import).
+</Note>
+
+## Share a clipboard with your Mac
+
+During a Remote Desktop session, you can copy text between your iPad and your Mac:
+
+- **From your Mac**: copy text on the Mac. It's on your iPad's clipboard right away.
+- **From your iPad**: copy text, and then tap **Send clipboard** in the control bar.
+
+Only text is shared. The clipboards stop sharing when the session ends.
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="“Open Scope extension on desktop”">
+    Lectra didn't find a browser to send to. On your computer, open Chrome and make sure the Scope extension or Lectra Receiver is signed in to the same account as Lectra. Then send again.
+  </Accordion>
+  <Accordion title="“File too large to export (25 MB max).”">
+    The document is larger than 25 MB. To share it another way, see [Export and share](/lectra/export-and-share).
+  </Accordion>
+  <Accordion title="“Please sign in again to export.”">
+    Your sign-in on this iPad expired. Sign in to Lectra again, and then send the document.
+  </Accordion>
+  <Accordion title="My other iPad or my browser isn't in the Send to list">
+    Make sure it's signed in to the same Lectra account, and open Lectra, Chrome, or the extension on it once so it can register.
+  </Accordion>
+  <Accordion title="A file from Chrome didn't arrive on my iPad">
+    Open Lectra and check the **Scope Inbox** in your library. Make sure Lectra on your iPad is signed in to the same account as the extension.
+  </Accordion>
+</AccordionGroup>
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Export and share" icon="share-from-square" href="/lectra/export-and-share">
+    Share a marked-up PDF with anyone, or save a full Lectra copy.
+  </Card>
+  <Card title="Lectra for Mac" icon="laptop" href="/lectra/mac">
+    Install the Mac app that connects your Mac to Lectra.
+  </Card>
+</CardGroup>

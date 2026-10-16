@@ -1,0 +1,173 @@
+---
+title: "Troubleshoot Polya"
+description: "Fix common problems with signing in, importing courses, chat, the Study tab, and the ChatGPT and Claude connectors."
+sidebarTitle: "Troubleshooting"
+---
+
+Find your problem in the following sections. Each one lists what you see and what to do. If nothing here helps, [contact Polya support](#get-more-help).
+
+## Signing in
+
+<AccordionGroup>
+  <Accordion title="Sign-in didn't go through. Please try again.">
+    Google sign-in didn't finish. Select **Continue with Google** again. If it keeps failing, make sure your browser allows cookies for askpolya.com, then try again.
+  </Accordion>
+  <Accordion title="That email and password didn't match. Try again.">
+    Email and password sign-in only works for accounts that already have a password. Most accounts use Google. Select **Use Google instead**, then **Continue with Google**.
+  </Accordion>
+  <Accordion title="My courses are missing after I sign in">
+    You may be signed in with a different Google account than the one you used before. Check the email address under your name at the bottom of the sidebar. If it's wrong, select **Sign out** and sign in with the other account.
+  </Accordion>
+  <Accordion title="Can't reach Polya right now">
+    Polya couldn't confirm your session, usually because of a brief outage. You're still signed in, and your courses and progress are safe. Select **Try Again** in a moment.
+  </Accordion>
+  <Accordion title="You've been signed out. Sign in again to keep going.">
+    Your session ended. Sign in again at [askpolya.com/login](https://askpolya.com/login). Polya takes you back to the page you were on.
+  </Accordion>
+</AccordionGroup>
+
+## Importing a course
+
+<AccordionGroup>
+  <Accordion title="Canvas didn't accept that access token">
+    The token was mistyped, incomplete, or deleted in Canvas. Copy the whole token again, or create a new one in Canvas under **Account** > **Settings** > **Approved Integrations**. Also check that **Your school's Canvas web address** is the address you use to reach Canvas, starting with `https://`.
+  </Accordion>
+  <Accordion title="Your Canvas access token stopped working — paste a new one.">
+    The token expired or was deleted in Canvas. Create a new token in Canvas, then select **Add a course** > **Paste a Canvas access token** and enter it. See [Add a course with a Canvas access token](/polya/add-a-course#add-a-course-with-a-canvas-access-token).
+  </Accordion>
+  <Accordion title="We couldn't find any active courses on this Canvas account">
+    Canvas didn't list any current courses for you. Your term may not have started, or the course may not be published yet. Check back once the course appears in Canvas. If you have more than one Canvas account, select **Use a different Canvas**.
+  </Accordion>
+  <Accordion title="Nothing arrives when I use the Scope extension">
+    - Make sure the extension is signed in with the same Google account you use on askpolya.com.
+    - Make sure you're on the course's page in Canvas when you choose **Study in Polya**.
+    - Keep the **Add a course** page open in Polya. It updates by itself.
+
+    If nothing arrives after a few minutes, select **paste a Canvas access token** on the Polya page and use a token instead. For help with the extension, see [Scope extension overview](/chrome/overview).
+  </Accordion>
+  <Accordion title="An import seems stuck or says it's waiting its turn">
+    Imports run in the background and can pause when Polya is under heavy use. The sidebar then says **Things are busier than usual, so this import is waiting its turn.** It continues on its own, and you can close Polya.
+
+    Polya also limits how many pages it reads for one account each day. If you brought in several large courses at once, part of the import can wait until the next day.
+  </Accordion>
+  <Accordion title="Some materials from Canvas are missing">
+    - Polya brings in only PDF files from Canvas. Save Word or PowerPoint files as PDFs and [upload them](/polya/materials#upload-your-own-files).
+    - If your instructor hides a part of the course, such as Files, Polya may not be able to see it.
+    - If the course changed since you added it, select **Check for updates** on the **Materials** tab. See [Check for updates](/polya/materials#check-for-updates).
+  </Accordion>
+  <Accordion title="That course has too many items to bring in at once.">
+    The course is too large to send in one go from the extension. Use a [Canvas access token](/polya/add-a-course#add-a-course-with-a-canvas-access-token) instead.
+  </Accordion>
+  <Accordion title="We couldn't open that website.">
+    The course website didn't respond or isn't public. Check that the address opens in your browser without signing in. See [Add a course website](/polya/add-a-course#add-a-course-website).
+  </Accordion>
+</AccordionGroup>
+
+## A file shows Couldn't read
+
+Polya couldn't read the item. Try the following:
+
+- **For an item from Canvas or a course website**, select **Check for updates** on the **Materials** tab. Polya tries items that couldn't be read again.
+- **For a file you uploaded**, check that it opens on your computer, then upload it again. If it's a PDF that was printed from another app, export it again as a PDF first.
+- **For a Google file on a course website**, it may be shared only with your school's Google accounts. Polya can't open those. Download it as a PDF and upload it.
+
+## A file shows Scanned — skipped
+
+Polya found no readable text in the file, even after reading the images of its pages. This can happen with very faint scans or handwriting. If you have a clearer copy, upload it.
+
+## Storage is full
+
+If Polya shows **Couldn't import** with **Your Lectra storage is full**, your Scope account has used all of its storage. Polya and Lectra share the same storage, so files in either app count toward it. Nothing you've already imported is affected.
+
+To make room, remove courses you no longer need from Polya, or free up space in Lectra. Then try again. To learn more, see [Lectra backups](/lectra/backups).
+
+## Chat
+
+<AccordionGroup>
+  <Accordion title="Polya can't answer right now">
+    Polya is under heavy use. Your question stays in the box. Select **Try Again** in a little while.
+  </Accordion>
+  <Accordion title="You've reached today's study-chat limit. It resets tomorrow.">
+    Each account can send 100 chat messages a day. You can still use the **Study** tab, and your materials and conversations are safe.
+  </Accordion>
+  <Accordion title="An answer has no citations">
+    Polya couldn't find the topic in your materials, so it answered from general knowledge. Check that the course's materials are **Ready** on the **Materials** tab. If the material is missing, [upload it](/polya/materials#upload-your-own-files) or [check for updates](/polya/materials#check-for-updates).
+  </Accordion>
+  <Accordion title="An answer looks wrong">
+    Polya can make mistakes. Open the citation to see what the source says. If the answer doesn't match your course, trust the source and your instructor. You can tell Polya what looks off and ask it to check again.
+  </Accordion>
+  <Accordion title="Polya won't give me the full answer">
+    The course's study mode limits how much Polya gives away. In **Guided** mode, show your attempt first or select **I'm stuck — next step**. To get full answers, switch the course to **Open** or **Review**. See [Study modes](/polya/study-modes).
+  </Accordion>
+  <Accordion title="Practice mode showed an answer key">
+    Polya recognizes answer keys by their file names. Files named with words like "solutions", "answers", or "soln" are hidden in Practice mode. An answer key with a different name isn't recognized. If you uploaded it, upload it again with "solutions" in the name.
+  </Accordion>
+  <Accordion title="A cited PDF doesn't show on my phone">
+    Phone browsers often can't show a PDF inside the page. Select **Open the PDF ↗** to open it in its own tab.
+  </Accordion>
+</AccordionGroup>
+
+## Study tab
+
+<AccordionGroup>
+  <Accordion title="Suggest topics doesn't appear">
+    **Suggest topics** only shows while the exam has no topics. If you've already added topics, edit the map yourself with **Edit**, or add topics with **Add**.
+  </Accordion>
+  <Accordion title="Polya couldn't find clear topics for this exam">
+    Select **Edit details** and paste what the exam covers in **What it covers**, or mark the formula sheet under **Formula sheet & past exams**. Then select **Suggest topics** again.
+  </Accordion>
+  <Accordion title="Polya couldn't write a question it was sure of">
+    No new question passed Polya's checks for that topic. Select **Try again**, or practice another topic. Topics with more course material behind them work best.
+  </Accordion>
+  <Accordion title="That's today's limit for new questions">
+    You've asked for new questions about eight times today. Questions you missed still come back for review. You can write new ones tomorrow.
+  </Accordion>
+  <Accordion title="My numeric answer won't submit">
+    Polya shows why under the box, for example **Check the parentheses.** or `Use * between numbers and names, like 2*pi.` Fix the expression and try again. For what you can type, see [Writing expressions](/polya/study#writing-expressions).
+  </Accordion>
+  <Accordion title="A practice question is wrong or off-topic">
+    Below the worked solution, select **Report a problem with this question**, add a note if you like, and select **Send report**. The question won't come up again.
+  </Accordion>
+</AccordionGroup>
+
+## ChatGPT and Claude
+
+<AccordionGroup>
+  <Accordion title="I can't find where to add Polya in ChatGPT">
+    Adding Polya needs ChatGPT's developer mode, which isn't available on every ChatGPT plan, and ChatGPT's menus change from time to time. Check OpenAI's help center for how to turn on developer mode and add a custom app. See [Use Polya in ChatGPT](/polya/chatgpt).
+  </Accordion>
+  <Accordion title="Claude won't let me add another custom connector">
+    Free Claude accounts can add one custom connector. Remove a connector you don't use, or use a paid Claude plan. On a Team or Enterprise plan, ask an owner of your organization to add Polya. See [Use Polya in Claude](/polya/claude).
+  </Accordion>
+  <Accordion title="This link has expired">
+    The sign-in link from ChatGPT or Claude timed out. Go back to the assistant and connect Polya again.
+  </Accordion>
+  <Accordion title="The assistant ignores my study mode">
+    Polya tells ChatGPT and Claude your mode, but it can't force them to follow it. Ask the assistant to check the course's study rules again. If you changed the mode recently, start a new chat.
+  </Accordion>
+  <Accordion title="The assistant says a course is still loading">
+    Polya is still importing the course. Wait until it finishes in Polya, then ask again.
+  </Accordion>
+  <Accordion title="The assistant shows the wrong courses">
+    The assistant is connected to a different Polya account. Disconnect Polya in the assistant's settings, then connect again and sign in with the right Google account.
+  </Accordion>
+</AccordionGroup>
+
+## Limits at a glance
+
+| Limit | Value |
+| --- | --- |
+| Chat messages | 40 per hour and 100 per day, per account |
+| Length of one chat question | 8,000 characters |
+| Uploaded PDF | 30 MB and 300 pages per file |
+| Upload file types | `.pdf`, `.txt`, `.json`, `.vtt`, `.srt` |
+| File types brought in from Canvas | PDF only |
+| Pages read from a course website | About 120 |
+| PDF pages read per account per day | 10,000, then the rest waits until the next day |
+| New practice question requests | About 8 per day |
+| **Suggest topics** | About 6 per day |
+| Connector search question | 2,000 characters |
+
+## Get more help
+
+Email [hello@askpolya.com](mailto:hello@askpolya.com) from the address you sign in with. Say which course and page you were on and what message you saw. For other ways to reach Scope, see [Get help](/resources/get-help).

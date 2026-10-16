@@ -1,0 +1,198 @@
+---
+title: "Use Git"
+description: "Connect GitHub, clone repositories, commit changes, and push and pull from your iPad."
+sidebarTitle: "Git"
+---
+
+Lectra includes Git, so you can keep a history of your project, clone a course's starter code, and push your work to GitHub from your iPad. You can use Git with buttons in the code editor or with the `git` command in the terminal. Commits, staging, branches, and diffs work offline. Cloning, pulling, and pushing need an internet connection.
+
+## Before you begin
+
+- **To use Git on your own projects**: nothing extra.
+- **To clone private repositories or push to GitHub**: sign in to Lectra, and then connect your GitHub account, as described in [Connect GitHub](#connect-github).
+- **Remotes must use HTTPS**: addresses that start with `https://`. SSH addresses, such as `git@github.com:…`, aren't supported.
+
+## Connect GitHub
+
+Lectra uses your GitHub access to list your repositories, clone private ones, and push. You need to be signed in to Lectra first.
+
+You can connect from either of these places:
+
+- **The Clone a Repo sheet**: in your library, tap **Projects** > **New** > **Clone a Repo**.
+- **The terminal**: tap **Connect GitHub** in the terminal's header.
+
+Then choose how to connect:
+
+<Tabs>
+  <Tab title="Sign in with GitHub">
+    Tap **Connect with GitHub**, sign in to GitHub, and allow access. When you return to Lectra, your repositories load.
+  </Tab>
+  <Tab title="Use a personal access token">
+    <Steps>
+      <Step title="Create a token on GitHub">
+        In your GitHub account settings, create a personal access token with access to the repositories you want to use.
+      </Step>
+      <Step title="Enter it in Lectra">
+        In the **Clone a Repo** sheet, tap **Use a personal access token**. Paste the token, and then tap **Save**.
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+When GitHub is connected, the terminal's header shows **GitHub** with a green dot. Lectra keeps your GitHub access on this iPad, for your Lectra account only. If you sign out of Lectra, it stops using it. To remove access completely, revoke it or delete the token in your GitHub account settings.
+
+<Note>
+  Lectra uses your GitHub access only for repositories on github.com. You can clone public repositories from other sites with `git clone` in the terminal, but you can't push to them.
+</Note>
+
+## Clone a repository
+
+<Tabs>
+  <Tab title="From your GitHub list">
+    <Steps>
+      <Step title="Open Clone a Repo">
+        In your library, tap **Projects** > **New** > **Clone a Repo**.
+      </Step>
+      <Step title="Pick a repository">
+        After **Loading your repositories…**, tap a repository in the list. A lock marks private ones.
+      </Step>
+      <Step title="Open it">
+        When cloning finishes, the repository appears in the **Projects** tab. Tap it to open it in the code editor.
+      </Step>
+    </Steps>
+    This copies only the latest version of the repository's default branch, without its earlier history. To get the full history or another branch, use `git clone` in the terminal.
+  </Tab>
+  <Tab title="With the terminal">
+    In a terminal, type `git clone` followed by the repository's HTTPS address:
+
+    ```bash
+    git clone https://github.com/username/repository.git
+    ```
+
+    Lectra puts the copy in your `Projects` folder and says "Cloned into Projects/" followed by its name. If that name is taken, Lectra adds a number. You can add `-b branch-name` to clone a specific branch, or `--depth 1` to copy only the latest version.
+  </Tab>
+</Tabs>
+
+## Set your name for commits
+
+Each commit records who made it. Unless you set your name, Lectra records commits as "Lectra". To use your own name and email, open the project's terminal and type:
+
+```bash
+git config user.name "Your Name"
+git config user.email "you@example.com"
+```
+
+Set these once in each repository. Lectra doesn't support `git config --global`.
+
+## Commit changes in the code editor
+
+<Steps>
+  <Step title="Open Source Control">
+    In an open project, tap **Source Control** (the branch button) in the top bar, or press <kbd>Control</kbd> <kbd>Shift</kbd> <kbd>G</kbd>.
+  </Step>
+  <Step title="Start tracking, if needed">
+    If the panel says **Not tracked yet**, tap **Start Version Control**. Lectra starts keeping a history of the project.
+  </Step>
+  <Step title="Review your changes">
+    Changed files are listed under **Changes**. Tap a file to see what changed in it.
+  </Step>
+  <Step title="Stage files">
+    Tap **+** (**Stage**) next to each file you want to include. It moves to **Staged Changes**. Tap **−** (**Unstage**) to take it back out.
+  </Step>
+  <Step title="Commit">
+    Type a description in **Commit message**, and then tap **Commit** followed by the number of files. When nothing is left to commit, the panel says **Working tree clean**.
+  </Step>
+</Steps>
+
+To switch to another branch that already exists, use the branch menu at the top of the panel. To create a branch, use `git switch -c branch-name` in the terminal.
+
+## Sync with GitHub
+
+**Sync to GitHub** saves your work to GitHub in one step. It commits every change in the project, gets any new changes from GitHub, and then pushes.
+
+<Steps>
+  <Step title="Open the project">
+    Open a project that you cloned from GitHub.
+  </Step>
+  <Step title="Tap Sync to GitHub">
+    Tap **Sync to GitHub** (the circular arrows) in the top bar. You can also choose **Sync with GitHub** in the command palette.
+  </Step>
+  <Step title="Check the result">
+    Lectra shows **Synced** when it's done, or **Couldn't Sync** with the reason.
+  </Step>
+</Steps>
+
+Sync commits with the message "Sync from Lectra" followed by the date. If you want your own commit messages, commit in **Source Control** first, and then sync.
+
+If GitHub has changes that conflict with yours, sync stops and says "Sync paused: changes on GitHub conflict with local edits." Open the project's terminal, type `git status` to see the conflicting files, fix them, and then sync again.
+
+## Use Git in the terminal
+
+The terminal's `git` command supports these subcommands:
+
+| Subcommand | What it supports |
+|---|---|
+| `init` | Start a repository. `-b` sets the first branch's name. |
+| `clone` | Copy a repository. `--depth`, `-b` or `--branch`, and `--single-branch`. |
+| `status` | Show changes. `-s` for short output, `-b` to show the branch. |
+| `add` | Stage files. Paths, `.`, `*`, and `-A`. |
+| `rm` | Remove files from the repository. |
+| `restore` | Undo changes. `--staged`, `--worktree`, and `--source`. |
+| `commit` | Commit staged changes. Use `-m "message"`. |
+| `log` | Show history. `-n` for the number of commits, up to 100. `--oneline` for short output. |
+| `diff` | Show changes. `--name-only`, `--stat`, and paths. |
+| `show` | Show a commit's details, without its changes. |
+| `branch` | List, create, or delete (`-d`, `-D`) branches. |
+| `checkout` | Switch branches (`-b` creates one), or restore files with `-- paths`. |
+| `switch` | Switch branches. `-c` creates one. |
+| `tag` | List, create, or delete (`-d`) tags. |
+| `fetch` | Get changes from a remote without applying them. |
+| `pull` | Get and apply changes. Only works when your branch has no new commits of its own. |
+| `push` | Send commits. `-u` sets the upstream branch. `-f` forces the push. |
+| `remote` | List (`-v`), `add`, `set-url`, `get-url`, and `remove` remotes. |
+| `config` | Read or set a setting for this repository. |
+| `rev-parse`, `version` | Show a commit ID, or the Git version. |
+
+To learn more about the terminal, see [Use the terminal](/lectra/terminal).
+
+## Limits
+
+- Remotes must use HTTPS. SSH remotes aren't supported.
+- `rebase`, `stash`, `merge`, submodules, and Git LFS aren't available.
+- `git pull` in the terminal works only when it doesn't need to merge. **Sync to GitHub** can merge.
+- Settings apply to one repository at a time. `--global` and `--system` aren't supported.
+- Lectra can push only to github.com.
+- The **Source Control** panel commits and switches branches. To pull or push, use **Sync to GitHub** or the terminal.
+
+If you need full Git, you can connect to another computer with `ssh` from the terminal. To learn how, see [Use the terminal](/lectra/terminal#connect-to-another-computer-with-ssh).
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="“Sign in to Lectra first, then connect GitHub.”">
+    Connecting GitHub needs a Lectra account. Sign in to Lectra, and then connect GitHub again.
+  </Accordion>
+  <Accordion title="“SSH Git remotes are not supported”">
+    Use the repository's HTTPS address instead. To change an existing remote, type `git remote set-url origin https://github.com/username/repository.git`.
+  </Accordion>
+  <Accordion title="“This project has no 'origin' remote to sync with”">
+    **Sync to GitHub** needs a remote named `origin`. In the project's terminal, type `git remote add origin` followed by the repository's HTTPS address.
+  </Accordion>
+  <Accordion title="Push or clone fails for a private repository">
+    Make sure GitHub is connected. The terminal's header shows **GitHub** with a green dot when it is. If you use a personal access token, check that it can access the repository.
+  </Accordion>
+  <Accordion title="“git … is not supported by Lectra's local Git runtime yet”">
+    That Git command isn't available on the iPad. Check [Limits](#limits) for alternatives.
+  </Accordion>
+</AccordionGroup>
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Use the code editor" icon="code" href="/lectra/code-editor">
+    Edit project files and use Source Control.
+  </Card>
+  <Card title="Use the terminal" icon="terminal" href="/lectra/terminal">
+    Run `git` and other commands.
+  </Card>
+</CardGroup>

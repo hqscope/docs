@@ -1,0 +1,163 @@
+---
+title: "Troubleshoot the Scope extension"
+description: "Fix common problems with the Scope extension: the search bar not opening, courses missing, search finding nothing, sign-in, Send to Lectra, reminders, and more."
+sidebarTitle: "Troubleshooting"
+---
+
+Most problems with Scope come down to three things: Scope hasn't read your courses yet, you aren't signed in, or a feature is turned off in Settings. Find your problem in the following sections.
+
+Before you start, two quick fixes solve a lot:
+
+- **Reload your course tab.** After Scope updates, open course tabs can lose touch with it. If a page says **Scope was updated — refresh this page to keep using it.**, reload it.
+- **Check that you're on the latest version.** Open Scope and look at **Settings** > **About** > **Version**. Chrome updates extensions on its own.
+
+## The search bar or popup
+
+<AccordionGroup>
+  <Accordion title="Cmd+K or Ctrl+K doesn't open the search bar">
+    - The search bar opens only on Canvas and Brightspace pages. On other sites, click the Scope icon in your toolbar.
+    - If your school uses its own address, the search bar doesn't open there. [Add your school's site](/chrome/connect-your-courses#add-your-schools-site) so Scope finds your courses, then search from the Scope icon.
+    - Right after a page loads, click anywhere on the page once, then press the keys again.
+    - After you install or update Scope, reload the course tab.
+  </Accordion>
+  <Accordion title="Pressing / opens Scope when I don't want it to">
+    Turn off **Open search with /** in **Settings** > **Features**. <kbd>⌘</kbd>+<kbd>K</kbd> and <kbd>Ctrl</kbd>+<kbd>K</kbd> still work.
+  </Accordion>
+  <Accordion title="I can't find the Scope icon">
+    Click the puzzle-piece icon to the right of the address bar, then click the pin next to **Scope**. See [Pin Scope to your toolbar](/chrome/install#pin-scope-to-your-toolbar).
+  </Accordion>
+</AccordionGroup>
+
+## Courses and search
+
+<AccordionGroup>
+  <Accordion title="The popup says No courses yet or Nothing here yet">
+    Scope hasn't found your courses. Click **Open Canvas** (or **Find My Courses** in the search bar), sign in to your school if asked, and stay on a course page until the bottom of the popup shows a number of items. See [Connect your courses](/chrome/connect-your-courses).
+  </Accordion>
+  <Accordion title="A course or a new file is missing">
+    Open a course tab, click the Scope icon, click **More actions**, and choose **Refresh sync**. Scope only checks for new material while a course tab is open. Big courses take a few minutes, because Scope reads the text of pages and PDFs after it finds their titles.
+  </Accordion>
+  <Accordion title="Refresh sync shows a message instead of checking">
+    - **Open Canvas in a tab, then refresh.** Open your course site, then try again.
+    - **Sign in to Canvas, then refresh.** Sign in to your school, then try again.
+    - **Couldn't check for new material. Make sure you're signed in to Canvas.** Reload the course tab, check that you're signed in, and try again.
+  </Accordion>
+  <Accordion title="Search finds nothing">
+    - Try fewer or different words. Scope understands abbreviations like `hw4` and small typos.
+    - If you limited search to one course, clear the course pill above the list (**Show all courses**).
+    - Make sure Scope has found your courses: the bottom-right corner of the popup should show a number of items.
+    - If you changed **Custom ranking**, open **Settings** > **Search & AI** > **Advanced** and click **Reset to defaults**.
+  </Accordion>
+  <Accordion title="Words inside a PDF don't show up in search">
+    Scope reads PDFs in the background after it finds them, so new files take a little while. For a scanned PDF with no text in it, Scope reads the pages only while you're away from your computer, so it doesn't slow you down. Leave Chrome open and come back later.
+  </Accordion>
+  <Accordion title="Results look wrong after I cleared my data">
+    **Clear Scope data on this browser** removes your course index. Open your course site and let Scope find your courses again.
+  </Accordion>
+</AccordionGroup>
+
+## Ask Scope and AI features
+
+<AccordionGroup>
+  <Accordion title="There's no Ask Scope row">
+    Ask Scope runs in the search bar on course pages, not in the toolbar popup. The row appears when what you type reads like a question. Add a question mark to the end.
+  </Accordion>
+  <Accordion title="Sign in to Scope to do that.">
+    Ask Scope and practice exams need a Scope account. See [Sign in to Scope](/chrome/sign-in).
+  </Accordion>
+  <Accordion title="Agent is paused.">
+    You paused the morning briefing, which also pauses Ask Scope. If a **Your morning study briefing** notification is still in your computer's notification list, click it and click **Resume agent**. Otherwise, [get help](/resources/get-help) from the Scope team. See [Pause or resume the morning briefing](/chrome/study-plan#pause-or-resume-the-morning-briefing).
+  </Accordion>
+  <Accordion title="Scope can't take this on right now">
+    Scope is busier than usual. Click **Try Again** in a little while. Search and everything you've saved still work.
+  </Accordion>
+  <Accordion title="Couldn't get an answer just now">
+    Wait a moment and ask again. If you asked many questions in a short time, give it a minute.
+  </Accordion>
+  <Accordion title="Scope says it's working from the Canvas pages I've opened">
+    Scope can only see Canvas pages you've opened, unless you connect Canvas with an access token. See [Connect Canvas with an access token](/chrome/connect-your-courses#connect-canvas-with-an-access-token-optional).
+  </Accordion>
+</AccordionGroup>
+
+## Sign in
+
+<AccordionGroup>
+  <Accordion title="Couldn't finish signing in">
+    Try again, and finish every step in the Google window. If a tab says **Close this tab, then sign in again from Scope.**, close it and start again from the popup.
+  </Accordion>
+  <Accordion title="Couldn't reach Scope right now">
+    Check your internet connection and try again in a moment. If you were already signed in, you still are, and nothing you saved is lost.
+  </Accordion>
+  <Accordion title="Calendar features say to connect Google">
+    Messages like **Connect Google in Scope first.** mean Scope can't use your calendar. Sign out of Scope, sign in again, and allow calendar access when Google asks.
+  </Accordion>
+</AccordionGroup>
+
+## Send to Lectra
+
+<AccordionGroup>
+  <Accordion title="I don't see the Send to Lectra button">
+    - Turn on **Send to Lectra** in **Settings** > **Features**. It's off by default.
+    - Sign in to Scope.
+    - Open the PDF on its own. On a Canvas page, the button appears only when Scope is sure there's a PDF on the page.
+    - If you use the Lectra Receiver extension, Scope hides its button on website PDFs so you don't see two.
+    - For PDFs saved on your computer, allow access to file URLs. See [Allow PDFs saved on your computer](/chrome/send-to-ipad#allow-pdfs-saved-on-your-computer).
+  </Accordion>
+  <Accordion title="Open Lectra on your iPad once, then send again.">
+    Lectra hasn't been opened on an iPad with your account yet. Open Lectra on your iPad, sign in with the same account you use in Scope, then send again.
+  </Accordion>
+  <Accordion title="The file didn't show up in Lectra">
+    - Open Lectra on your iPad and check **Scope Inbox**. If you saw **Sent. It'll appear the next time you open Lectra.**, it arrives when you open Lectra.
+    - Make sure Lectra and Scope use the same account.
+    - Check the footer of the Scope popup. **Lectra not connected** means Scope can't reach Lectra right now. Try again in a moment.
+  </Accordion>
+  <Accordion title="Select from Lectra doesn't appear on an assignment">
+    It appears only while **Send to Lectra** is on and you're signed in, on Canvas assignments that accept file uploads and in Gradescope's submission window. If you use the Lectra Receiver extension, Scope hides its own button.
+  </Accordion>
+  <Accordion title="Couldn't find where to put the file">
+    Close Gradescope's submit window, open it again, then try again.
+  </Accordion>
+  <Accordion title="Import course to Lectra or Download course to computer is missing">
+    These appear in **More actions** only when you're on a Canvas course's **Files** page. **Import course to Lectra** also needs **Send to Lectra** on.
+  </Accordion>
+  <Accordion title="Your Lectra storage is full">
+    Free up space in Lectra on your iPad, then send again.
+  </Accordion>
+</AccordionGroup>
+
+For every send message and what it means, see [If a send doesn't work](/chrome/send-to-ipad#if-a-send-doesnt-work).
+
+## Reminders, calendar, and Canvas appearance
+
+<AccordionGroup>
+  <Accordion title="I don't get deadline reminders">
+    - Turn on **Deadline reminders** in **Settings** > **Features**. One-time reminders also need it.
+    - Make sure your computer allows notifications from Chrome. On a Mac, check **System Settings** > **Notifications** > **Google Chrome**. On Windows, check **Settings** > **System** > **Notifications**.
+    - Reminders appear only while Chrome is running.
+  </Accordion>
+  <Accordion title="Fewer syllabus deadlines reached my calendar than I picked">
+    Sign out of Scope, sign in again, and allow calendar access when Google asks. Then run **Syllabus Autopilot** again.
+  </Accordion>
+  <Accordion title="Canvas looks wrong">
+    Open **Settings** > **Appearance** and set **Canvas theme** to **Canvas Default**, or open **Canvas tweaks** and click **Reset Canvas appearance**.
+  </Accordion>
+  <Accordion title="Grade pills don't appear">
+    Turn on **Grade pills on cards** under **Canvas tweaks**. Pills appear only on the Canvas dashboard, and only for courses where Canvas shows you a grade.
+  </Accordion>
+</AccordionGroup>
+
+## Berkeley's Schedule Planner
+
+See the troubleshooting section of [Plan classes in Berkeley's Schedule Planner](/chrome/berkeley-schedule-planner#troubleshooting).
+
+## Still stuck?
+
+[Get help](/resources/get-help) from the Scope team. To help them find the problem, include:
+
+- Your Scope version, from **Settings** > **About** > **Version**.
+- Your Chrome version, from the Chrome menu > **Help** > **About Google Chrome**.
+- Your school, and the course you were using, if it's a search or course problem.
+- What you expected, what happened instead, and any message you saw.
+- A screenshot, if you can see the problem.
+
+For problems that affect more than one Scope app, see [Troubleshooting](/resources/troubleshooting).

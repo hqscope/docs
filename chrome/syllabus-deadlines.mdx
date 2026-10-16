@@ -1,0 +1,79 @@
+---
+title: "Add syllabus deadlines to your calendar"
+description: "Have Scope pull the exams, assignments, and due dates out of a Canvas syllabus, then add the ones you pick to your agenda and Google Calendar."
+sidebarTitle: "Syllabus deadlines"
+---
+
+A syllabus lists every exam and assignment for the term, but copying those dates into a calendar by hand takes a while. Scope can read the syllabus for you, list the deadlines it finds, and add the ones you pick to your Scope agenda and your Google Calendar.
+
+## Before you begin
+
+- Sign in to Scope with Google. Reading the syllabus and adding to your calendar both need it. See [Sign in to Scope](/chrome/sign-in).
+- Open the syllabus in Canvas. Scope can read a course's **Syllabus** page, a course home page that holds the syllabus, or a syllabus PDF.
+
+## Add deadlines from a syllabus
+
+You can start in two ways: from the offer Scope shows on a syllabus, or from the search bar.
+
+<Tabs>
+  <Tab title="From the syllabus offer">
+    When you open a page in Canvas that looks like a syllabus, Scope shows a card: **This looks like a syllabus**, **Extract the deadlines and add them to your Google Calendar?**
+
+    Click **Add to Calendar** to start. Click **Not now** if you don't want it. Either way, Scope won't offer again for that course.
+  </Tab>
+  <Tab title="From the search bar">
+    On the syllabus page, press <kbd>⌘</kbd>+<kbd>K</kbd> or <kbd>Ctrl</kbd>+<kbd>K</kbd>, type `syllabus` or `autopilot`, and press <kbd>Enter</kbd> on **Syllabus Autopilot**.
+  </Tab>
+</Tabs>
+
+Then:
+
+<Steps>
+  <Step title="Wait while Scope reads the syllabus">
+    The **Syllabus Autopilot** window shows three steps: reading the syllabus, **Step 2 of 3: Finding your deadlines...**, and **Step 3 of 3: Compiling schedule list...**. A scanned PDF takes longer.
+  </Step>
+  <Step title="Review the list">
+    Scope shows how many deadlines it found, with **deadlines found — pick the ones to add**. Each deadline has a checkbox, a title, and a date and time. Fix any title or date that's wrong, and clear the checkbox for anything you don't want.
+  </Step>
+  <Step title="Choose whether to add them to Google Calendar">
+    **Sync to my Google Calendar** is selected. Clear it if you want the deadlines on your Scope agenda only.
+  </Step>
+  <Step title="Save">
+    Click **Save and Schedule**. A message confirms how many deadlines were added and how many went to Google Calendar.
+  </Step>
+</Steps>
+
+Each deadline you keep becomes a to-do on your Scope agenda. If you kept **Sync to my Google Calendar** selected, Scope also adds a 30-minute event at the due time to your main Google Calendar.
+
+<Note>
+  Scope uses AI to read the syllabus, so it can miss a date or read one wrong. Check the list against the syllabus before you click **Save and Schedule**.
+</Note>
+
+## Turn the syllabus offer on or off
+
+The **This looks like a syllabus** card is on by default. To turn it off, open Scope, go to **Settings** > **Features**, and turn off **Syllabus deadlines**. You can still run **Syllabus Autopilot** from the search bar.
+
+## If something goes wrong
+
+If Scope can't finish, the window shows **Autopilot Parsing Failed** and a reason. Click **Close**.
+
+| Reason | What to do |
+|---|---|
+| **You must be signed in to Scope to use AI parsing.** | Sign in to Scope, then try again. |
+| **No syllabus content found. Open a syllabus PDF, or your Canvas Syllabus / course home page, and try again.** | Go to the syllabus itself, then run it again. |
+| **Could not parse any text from the PDF syllabus.** | The PDF may be an image with no text. Try the course's **Syllabus** page instead. |
+| **No assignments or key deadlines were found in the syllabus.** | The page may not list dates. Try a different syllabus page or file. |
+| A message about the AI not responding | Wait a moment and try again. |
+
+If fewer deadlines reached Google Calendar than you expected, sign out of Scope and sign in again, and allow calendar access when Google asks.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Track what's due" icon="calendar-check" href="/chrome/due-dates">
+    See your new to-dos with the rest of your deadlines.
+  </Card>
+  <Card title="Make a study plan" icon="list-check" href="/chrome/study-plan">
+    Plan study time around your deadlines.
+  </Card>
+</CardGroup>

@@ -1,0 +1,97 @@
+---
+title: "Study modes"
+description: "Choose how much help Polya gives in each course: Open, Guided, Practice, or Review."
+---
+
+A study mode sets how much Polya gives away when you ask for help in a course. You choose one mode per course, and you can change it at any time. The mode applies in Polya's chat, and in ChatGPT and Claude when you connect Polya to them.
+
+## The four modes
+
+| Mode | What Polya does | Good for |
+| --- | --- | --- |
+| **Open** | Gives full answers and walkthroughs when you ask. | Reading up and reviewing material you already understand. |
+| **Guided** | Starts with hints and one step at a time. Holds the full solution until you've had a go. This is the default. | Homework and problem sets you're working through. |
+| **Practice** | Takes a quiz stance. You commit to an answer before Polya reveals anything, and help stops at one guided step. Answer keys are hidden. | Testing yourself before an exam. |
+| **Review** | Gives full worked solutions, then suggests a related practice task. | Going over work after the deadline. |
+
+In every mode, Polya explains its reasoning and cites your course materials. Concept questions, like "what is a confidence interval?", get a full answer in every mode. The modes differ in how they handle problems you're asked to solve.
+
+### Open
+
+**Full answers when you ask — best for reading up.** If you ask for the answer or a full walkthrough, Polya gives it right away, with citations.
+
+### Guided
+
+**Hints and steps first; the full solution waits until you've had a go.** On a problem, Polya starts by asking what you've tried or by pointing to the relevant idea. It climbs one step at a time as you engage. It can work a similar problem in full, but it doesn't walk through your own problem until you've shown an attempt in the conversation.
+
+### Practice
+
+**Quiz stance — you commit to an answer before Polya reveals anything.** Polya asks for your answer first. After you commit, it tells you whether you're right and explains why. When you're stuck, it gives at most one guided step at a time.
+
+In Practice mode, Polya leaves out course files that look like answer keys. It recognizes them by their names, such as files with "solutions", "answers", "answer key", "sol", or "soln" in the title. For example, `hw3_solutions.pdf` and `soln-section9.pdf` are both hidden.
+
+<Tip>
+If you upload your own answer keys, put "solutions" or "answers" in the file name so Practice mode hides them.
+</Tip>
+
+### Review
+
+**After a deadline — full worked solutions plus a suggested next practice.** Polya walks through the full solution with the reasoning at each step, then suggests one related problem to try.
+
+## Change a course's study mode
+
+<Steps>
+  <Step title="Open the course's Materials tab">
+    Open the course, then select **Materials**. On the **Chat** tab, you can also select the mode label next to the course name.
+  </Step>
+  <Step title="Choose a mode">
+    Under **How much help do you want?**, select **Open**, **Guided**, **Practice**, or **Review**.
+
+    Polya shows **Saving…**, then **✓ Saved**. The new mode takes effect right away, including in a conversation that's already open.
+  </Step>
+</Steps>
+
+If Polya shows **Couldn't save. Try again.**, the mode goes back to the last one that saved. Select the mode again.
+
+The current mode appears as a label next to the course name on the **Chat** tab and on the course's card on **Your courses**.
+
+## Add a note to the tutor
+
+You can give Polya a standing preference for a course, like a method your professor wants you to use.
+
+<Steps>
+  <Step title="Find the note box">
+    On the course's **Materials** tab, find **Note to the tutor (optional)** below the study modes.
+  </Step>
+  <Step title="Write your note">
+    Type your preference, for example "On this unit, use the substitution method from Lecture 8."
+  </Step>
+  <Step title="Save it">
+    Select anywhere outside the box. Polya saves the note.
+  </Step>
+</Steps>
+
+Polya reads your note as a preference. It can't change the study mode or turn off citations. The note applies in Polya's own chat. ChatGPT and Claude don't see it.
+
+## Study modes in ChatGPT and Claude
+
+When you connect Polya to ChatGPT or Claude, the assistant reads each course's study mode before it helps with that course's coursework. It's told to check the mode again for each new question, so a change you make in Polya applies from the next question on. It's also told to treat each part of a multi-part problem as its own question.
+
+<Warning>
+Polya tells ChatGPT and Claude which mode you chose, but it can't force another company's assistant to follow it. If an assistant goes past your mode, remind it to check the course's study rules. To learn more, see [Use Polya in ChatGPT](/polya/chatgpt) and [Use Polya in Claude](/polya/claude).
+</Warning>
+
+## Who sets the study mode
+
+You do. Study modes are your own choice for each course. Instructors can't set or lock a course's mode in Polya. Your syllabus and your school's honor code decide what help is allowed, so check them when you choose a mode.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Ask questions" icon="comments" href="/polya/chat">
+    How the help ladder works in chat.
+  </Card>
+  <Card title="Manage materials" icon="folder-open" href="/polya/materials">
+    Everything else on the Materials tab.
+  </Card>
+</CardGroup>

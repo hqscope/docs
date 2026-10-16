@@ -1,0 +1,169 @@
+---
+title: "Lectra Receiver for Chrome"
+description: "Send PDFs from Chrome to Lectra on your iPad, receive pages back from your iPad, and attach Lectra PDFs on Gradescope."
+sidebarTitle: "Lectra Receiver for Chrome"
+---
+
+Lectra Receiver is a free Chrome extension that moves PDFs between your browser and Lectra on your iPad. Use it to send a reading from a browser tab to your iPad, to download a marked-up document you send back from Lectra, and to attach a Lectra PDF to a Gradescope submission without saving it first.
+
+<Note>
+  Two Scope apps carry the name Lectra Receiver. This page covers the **Chrome extension**, which you get from the Chrome Web Store. The app you install on a Mac also shows up as Lectra Receiver in your menu bar, and the canvascope.org/receiver page is about that Mac app. To learn about it, see [Lectra for Mac](/lectra/mac).
+</Note>
+
+<Tip>
+  If you already use the Scope extension for Chrome, it can send course files to your iPad too. To learn how, see [Send files from Chrome to your iPad](/chrome/send-to-ipad). Lectra Receiver is a smaller extension that does only the PDF handoff. If you install both, Lectra Receiver's **Send to Lectra** and **Select from Lectra** buttons take the place of the Scope extension's, so you see one of each.
+</Tip>
+
+## Before you begin
+
+- Chrome on a computer.
+- Lectra on your iPad, signed in to your account. To learn about accounts, see [Your Scope account](/get-started/account).
+- A Google account. Lectra Receiver signs in with Google only. Use the same Google account that you use for Lectra on your iPad, so both apps reach the same library.
+
+## Install Lectra Receiver
+
+<Steps>
+  <Step title="Add the extension">
+    Open [Lectra Receiver in the Chrome Web Store](https://chromewebstore.google.com/detail/hohamfnjodkldfkaippcniphllkfjejf), and then click **Add to Chrome**. When Chrome asks, click **Add extension**. The listing names the publisher as Canvascope, the former name of Scope.
+  </Step>
+  <Step title="Pin it to the toolbar">
+    In the Chrome toolbar, click **Extensions** (the puzzle piece), and then click the pin next to **Lectra Receiver**. Pinning keeps the icon in reach.
+  </Step>
+  <Step title="Sign in">
+    Click the **Lectra Receiver** icon, and then click **Sign in with Google**. Choose the Google account that you use for Lectra. When you're signed in, the panel shows "Signed in as" followed by your email address.
+  </Step>
+  <Step title="Check that Lectra tools are on">
+    In the same panel, make sure the **Lectra tools** switch is on. It's on when you install the extension. While it's on, the **Send to Lectra** button appears on PDFs and the extension stays ready to receive files.
+  </Step>
+</Steps>
+
+The **Receiver** card at the bottom of the panel shows whether the extension is ready. A green dot means it's ready. An orange dot means it needs your attention, for example because you're signed out or Lectra tools are off. A red dot means something went wrong.
+
+## Send a PDF to your iPad
+
+<Steps>
+  <Step title="Open the PDF in Chrome">
+    Open any PDF in a Chrome tab, such as a reading on your course site. A floating **Send to Lectra** button appears on the page.
+  </Step>
+  <Step title="Click Send to Lectra">
+    The button changes to **Sending…** and then to **Sent ✓**.
+  </Step>
+  <Step title="Open it on your iPad">
+    In Lectra, the file arrives in the **Scope Inbox** in your library. If Lectra is open, a message says that the file arrived, with an **Open** button.
+  </Step>
+</Steps>
+
+<Tip>
+  If the button covers something on the page, press and hold it, and then drag it somewhere else. Lectra Receiver remembers where you put it.
+</Tip>
+
+### Send a PDF saved on your computer
+
+Chrome blocks extensions from reading files on your computer until you allow it. To send a PDF that you opened from your computer:
+
+<Steps>
+  <Step title="Open the extension's details">
+    In Chrome, go to `chrome://extensions`, find **Lectra Receiver**, and then click **Details**.
+  </Step>
+  <Step title="Allow file access">
+    Turn on **Allow access to file URLs**.
+  </Step>
+  <Step title="Send the PDF">
+    Reload the PDF tab, and then click **Send to Lectra**.
+  </Step>
+</Steps>
+
+<Note>
+  Lectra Receiver sends PDFs only, up to 25 MB each.
+</Note>
+
+## Receive a document from your iPad
+
+When you send a document from Lectra on your iPad to your computer, Lectra Receiver downloads it in Chrome to your usual downloads folder.
+
+<Steps>
+  <Step title="Keep Chrome ready">
+    On your computer, keep Chrome open with Lectra Receiver signed in and **Lectra tools** on.
+  </Step>
+  <Step title="Send from Lectra">
+    On your iPad, open the document in Lectra. Tap the document's name at the top of the screen, and then tap **Export to Scope**.
+  </Step>
+  <Step title="Choose your browser, if Lectra asks">
+    If you have more than one place to send to, Lectra shows a **Send to** list. Lectra Receiver appears with the name of your browser and computer, such as **Chrome + macOS**. Tap it.
+  </Step>
+  <Step title="Find the download">
+    Lectra shows "Sending to" followed by the destination name, and then "Sent to" when the upload finishes. A moment later, the PDF downloads to your **Downloads** folder, with your markup on the pages. Chrome doesn't show a separate notification, so look in Chrome's download list or your **Downloads** folder.
+  </Step>
+</Steps>
+
+If Chrome is closed when you send, the document waits. It downloads the next time Chrome opens with Lectra Receiver running. To learn about every way to move files, see [Send files between devices](/lectra/send-between-devices).
+
+## Attach a Lectra PDF on Gradescope
+
+Lectra Receiver adds a **Select from Lectra** button to Gradescope upload forms, so you can submit a document from your Lectra library directly.
+
+<Steps>
+  <Step title="Open the upload form">
+    In Gradescope, open the assignment and start a submission. Next to Gradescope's **Select PDF** button, a **Select from Lectra** button appears.
+  </Step>
+  <Step title="Choose a document">
+    Click **Select from Lectra**. A list of your Lectra documents opens. To find one, type in **Search your Lectra documents…**, and then click the document.
+  </Step>
+  <Step title="Submit">
+    The button changes to show the document's name followed by "ready". Finish the submission in Gradescope as usual.
+  </Step>
+</Steps>
+
+In the list, a document marked **Annotated** has a backed-up copy that includes your markup. A document marked **Open on iPad** is the one open in Lectra on your iPad right now.
+
+<Note>
+  The list shows only documents that Lectra has backed up from your iPad. Lectra Receiver attaches the most recent backed-up copy of your pages, or the original PDF if no marked-up copy exists yet. If you wrote on a document recently, give Lectra time to back it up before you attach it. To learn how backups work, see [Backups](/lectra/backups).
+</Note>
+
+## Sign out or turn it off
+
+- **To pause the extension**, click the Lectra Receiver icon and turn off **Lectra tools**. The **Send to Lectra** button disappears, the **Select from Lectra** button disappears from Gradescope, and the extension stops receiving files.
+- **To sign out**, click the Lectra Receiver icon, and then click **Sign out**.
+- **To remove it**, right-click the Lectra Receiver icon, and then click **Remove from Chrome**.
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="The Send to Lectra button doesn't appear">
+    Click the Lectra Receiver icon and check that you're signed in and that **Lectra tools** is on. If the PDF is a file on your computer, turn on **Allow access to file URLs** as described in [Send a PDF saved on your computer](#send-a-pdf-saved-on-your-computer). Then reload the tab.
+  </Accordion>
+  <Accordion title="“No PDF detected on this page.”">
+    Lectra Receiver couldn't find a PDF in the tab. Open the PDF itself, so the tab shows only the document, and then try again.
+  </Accordion>
+  <Accordion title="“Can't access this PDF from this tab. Open it directly and try again.”">
+    The site didn't let the extension download the file from this page. Open the PDF in its own tab, and then click **Send to Lectra** again.
+  </Accordion>
+  <Accordion title="“PDF is too large (25 MB max).”">
+    Lectra Receiver sends PDFs up to 25 MB. For a larger file, download it and import it into Lectra on your iPad instead. To learn how, see [Import documents](/lectra/import).
+  </Accordion>
+  <Accordion title="“Sign in to send PDFs to Lectra.”">
+    Click the Lectra Receiver icon, and then click **Sign in with Google**.
+  </Accordion>
+  <Accordion title="A file I sent doesn't show up on my iPad">
+    Make sure Lectra on your iPad is signed in to the same account as Lectra Receiver. Open Lectra and check the **Scope Inbox** in your library.
+  </Accordion>
+  <Accordion title="A document from my iPad doesn't download">
+    Check that Chrome is open, that Lectra Receiver is signed in to the same account as your iPad, and that **Lectra tools** is on. The document downloads when the extension is ready.
+  </Accordion>
+  <Accordion title="Select from Lectra says there are no documents">
+    The list shows only documents that Lectra has backed up. Sign in to Lectra on your iPad with the same account, and give it time to back up. To learn more, see [Backups](/lectra/backups).
+  </Accordion>
+</AccordionGroup>
+
+If you still need help, see [Get help](/resources/get-help).
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Send files between devices" icon="arrow-right-arrow-left" href="/lectra/send-between-devices">
+    Every way to move files between Chrome, your iPad, and your Mac.
+  </Card>
+  <Card title="Send files from Chrome to your iPad" icon="paper-plane" href="/chrome/send-to-ipad">
+    Use the Scope extension to send course files to Lectra.
+  </Card>
+</CardGroup>

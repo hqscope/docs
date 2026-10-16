@@ -1,0 +1,157 @@
+---
+title: "Connect your courses"
+description: "Open your Canvas or Brightspace site once so Scope can find your courses, keep them up to date, and add your school's site if Scope doesn't recognize it."
+sidebarTitle: "Connect your courses"
+---
+
+Scope finds your courses by reading your school's course site while you're signed in to it. There's no school code to enter and no password to give Scope. You open Canvas or Brightspace once, and Scope does the rest in the background.
+
+## Supported course sites
+
+Scope works with Canvas and Brightspace (also called D2L). It recognizes these addresses automatically:
+
+| Platform | Addresses Scope recognizes |
+|---|---|
+| Canvas | Any `*.instructure.com` address, plus `bcourses.berkeley.edu`, `bruinlearn.ucla.edu`, `canvas.ucsd.edu`, `canvas.asu.edu`, and `canvas.mit.edu` |
+| Brightspace | Any `*.brightspace.com` or `*.d2l.com` address |
+
+If your school uses its own address for Canvas or Brightspace, you can add it. See [Add your school's site](#add-your-schools-site).
+
+<Note>
+  Search, the agenda, Ask Scope, and the study commands work on both. Some features work only on Canvas: Canvas appearance, grades, sending course files to Lectra from a course page, **Study in Polya**, and **Connect Canvas**. See [Where Scope works](/chrome/overview#where-scope-works).
+</Note>
+
+## Find your courses for the first time
+
+<Steps>
+  <Step title="Open your course site">
+    Click the Scope icon in your toolbar, then click **Open Canvas**. You can also click **Open Canvas** on the welcome page that opened when you installed Scope.
+
+    Scope picks where to go: a course tab you already have open, your school's Canvas if it can tell from your account, or Canvas's own find-your-school page.
+  </Step>
+  <Step title="Sign in to your school">
+    If your school asks you to sign in, sign in as usual. Scope never sees your password and doesn't run on sign-in pages.
+  </Step>
+  <Step title="Let Scope look through your courses">
+    Stay on any course page. The bottom of the Scope popup shows progress, such as **Updating your courses… 2 of 5**, then **Reading course pages… 2 of 5**, then **Almost done…**.
+  </Step>
+  <Step title="Check what Scope found">
+    When it finishes, the bottom-right corner of the popup shows how many items Scope found, for example **214 items**. Click it to open **Everything Scope Found**.
+  </Step>
+</Steps>
+
+The first pass finds titles, due dates, and links. Scope then keeps reading the text of course pages, the syllabus, assignment instructions, and PDFs in the background, so searches get better over the next few minutes.
+
+## How Scope stays up to date
+
+You don't need to do anything to keep your courses current.
+
+- When you switch to a course tab, Scope checks for new material.
+- While a course tab is open, Scope checks again about every 30 minutes.
+- Scope reads the text inside new course PDFs in the background.
+- If a PDF is a scan with no text in it, Scope reads the scanned pages on your computer while you're away from it, so your computer stays responsive while you work.
+
+<Note>
+  Scope only checks for new material while you have a Canvas or Brightspace tab open. If you haven't opened your course site in a while, open it and Scope catches up.
+</Note>
+
+## Check for new material now
+
+If your instructor recently posted something, you can ask Scope to look right away.
+
+<Steps>
+  <Step title="Open a course tab">
+    Make sure a Canvas or Brightspace tab is open and you're signed in.
+  </Step>
+  <Step title="Refresh">
+    Click the Scope icon, click **More actions** (the three dots), and choose **Refresh sync**.
+  </Step>
+</Steps>
+
+The bottom of the popup shows the progress. When it's done, it says how long ago Scope last checked, such as **synced 1m ago**.
+
+### Messages you might see
+
+| Message | What it means | What to do |
+|---|---|---|
+| **No courses yet** | Scope hasn't found anything yet. | Click **Open Canvas** and wait for the first pass to finish. |
+| **Open Canvas in a tab, then refresh.** | No course tab is open, so Scope has nothing to read. | Open your course site, then choose **Refresh sync** again. |
+| **Sign in to Canvas, then refresh.** | You're on your school's sign-in page, or signed out. | Sign in to your school, then choose **Refresh sync** again. |
+| **Couldn't check for new material. Make sure you're signed in to Canvas.** | The check didn't finish. | Reload your course tab, make sure you're signed in, and try again. |
+
+## Add your school's site
+
+If your school's Canvas or Brightspace uses an address Scope doesn't recognize, add it in Settings.
+
+<Steps>
+  <Step title="Go to a course page">
+    Open a course page on your school's site, such as a course home page or assignment list.
+  </Step>
+  <Step title="Open Settings">
+    Click the Scope icon, then click the **Settings** icon (the gear).
+  </Step>
+  <Step title="Add the site">
+    Under **Course sites**, Scope shows **Add this site?** with your school's address. Click **Add**.
+  </Step>
+  <Step title="Reload the course page">
+    Go back to the course tab and reload it. Scope starts finding your courses.
+  </Step>
+</Steps>
+
+Scope offers **Add this site?** only when the page looks like a course page. If you don't see the offer, open a course's home page or its assignment list and open Settings again.
+
+<Note>
+  On a site you add, Scope finds your courses, and you search them from the Scope icon in your toolbar. The <kbd>⌘</kbd>+<kbd>K</kbd> search bar, Ask Scope, and the commands open only on the Canvas and Brightspace addresses Scope recognizes on its own.
+</Note>
+
+To stop Scope from running on a site you added, go to **Settings** > **Course sites** and click **Remove** next to it.
+
+## Connect Canvas with an access token (optional)
+
+By default, Scope works from the Canvas pages you open. If you sign in to Scope, you can also give it a Canvas access token. Then Ask Scope can check what's due, module pages, and files for you even when Canvas isn't open.
+
+<Info>
+  An access token is a long code that Canvas creates for you. It lets an app read your Canvas account without your password. You can delete it in Canvas at any time.
+</Info>
+
+<Steps>
+  <Step title="Sign in to Scope">
+    The **Connect Canvas** section appears in Settings only after you sign in. See [Sign in to Scope](/chrome/sign-in).
+  </Step>
+  <Step title="Create a token in Canvas">
+    In Canvas, go to **Account** > **Settings**. Under **Approved Integrations**, choose **+ New Access Token**. Name it "Scope", pick an expiry if you like, and choose **Generate Token**. Copy the token.
+  </Step>
+  <Step title="Paste it into Scope">
+    In Scope, open **Settings** > **Connect Canvas**. In **Canvas address**, enter your school's Canvas address, such as `school.instructure.com`. In **Access token**, paste the token.
+  </Step>
+  <Step title="Connect">
+    Click **Connect**. When it works, Scope shows **Connected to** your school's address and your Canvas name.
+  </Step>
+</Steps>
+
+Scope uses the token only when you ask it something about your courses.
+
+<Note>
+  Some schools don't let students create access tokens. If you don't see **+ New Access Token** in Canvas, skip this step. Scope keeps working with the Canvas pages you open.
+</Note>
+
+To disconnect, open **Settings** > **Connect Canvas** and click **Disconnect**. Scope forgets your token. You can also delete it in Canvas under **Approved Integrations**.
+
+### If the connection fails
+
+| Message | What to do |
+|---|---|
+| **That token didn't work. Check that you copied the whole thing and that it hasn't expired.** | Create a new token in Canvas and paste the whole thing. |
+| **Scope can't connect to that address. Check it and try again.** | Check the address. Use your school's Canvas address, not a course link. |
+| **Couldn't reach Canvas right now. Try again in a moment.** | Check your internet connection and try again. |
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Search your courses" icon="magnifying-glass" href="/chrome/search">
+    Find any file, page, or assignment with Cmd+K or Ctrl+K.
+  </Card>
+  <Card title="Troubleshooting" icon="wrench" href="/chrome/troubleshooting">
+    Fix courses that don't show up or look out of date.
+  </Card>
+</CardGroup>

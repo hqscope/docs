@@ -1,0 +1,101 @@
+---
+title: "Use Polya in ChatGPT"
+description: "Connect Polya to ChatGPT so it can search your course materials and follow the study mode you chose for each course."
+sidebarTitle: "Use in ChatGPT"
+---
+
+If you already ask ChatGPT for help with coursework, you can connect it to Polya. ChatGPT can then see the courses you added to Polya, check the study mode you chose for each one, and search your course materials so its explanations cite what your class covers.
+
+## Before you begin
+
+- [Add at least one course to Polya](/polya/add-a-course).
+- [Choose a study mode](/polya/study-modes) for each course. ChatGPT checks it before helping with that course.
+- You need a ChatGPT account where you can turn on developer mode. Developer mode isn't available on every ChatGPT plan.
+
+<Note>
+Polya isn't listed in ChatGPT's plugin directory yet. You add it with its address, `https://askpolya.com/mcp`, using ChatGPT's developer mode. ChatGPT's menus change from time to time. If a step doesn't match what you see, check OpenAI's help center for how to add a custom app in developer mode.
+</Note>
+
+## Connect Polya to ChatGPT
+
+<Steps>
+  <Step title="Turn on developer mode">
+    In ChatGPT, open **Settings**, then **Security and login**, and turn on **Developer mode**.
+  </Step>
+  <Step title="Add Polya">
+    Go to **Plugins** and choose **+**. Name it "Polya" and enter this address:
+
+    ```text
+    https://askpolya.com/mcp
+    ```
+  </Step>
+  <Step title="Sign in to Polya">
+    When ChatGPT asks, sign in to Polya with the same Google account you use on askpolya.com.
+
+    Polya asks whether to connect ChatGPT to Polya. It shows the account you're signed in as and lists what ChatGPT will be able to do.
+  </Step>
+  <Step title="Allow access">
+    Select **Allow**. Polya sends you back to ChatGPT, and the connection is ready.
+
+    To cancel instead, select **Don't allow**.
+  </Step>
+</Steps>
+
+If Polya shows **This link has expired**, go back to ChatGPT and connect Polya again.
+
+## Things to ask
+
+Mention the course by name so ChatGPT knows which one to use. For example:
+
+- "What study mode is my Data 100 course in?"
+- "Explain gradient descent the way my Data 100 lectures do."
+- "Quiz me on this week's probability material."
+
+## What ChatGPT can do with Polya
+
+The connection can only read. It can't change anything in Polya or Canvas. ChatGPT can do the following:
+
+| What it can do | Details |
+| --- | --- |
+| List your courses | Names, terms, and whether each course's materials are ready. A course that's still importing shows as still loading. |
+| Read a course's study rules | The study mode you chose, what help it allows, and what it doesn't. |
+| Search a course's materials | Readings, slides, pages, and lecture transcripts. Each result is numbered and says where it came from, like a page number. In Practice mode, search never returns answer keys. |
+
+ChatGPT is told to check a course's study mode again before each new coursework question, to treat each part of a multi-part problem as its own question, and to cite the passages it used.
+
+<Warning>
+ChatGPT writes its own answers. Polya tells it which study mode you chose, but it can't force ChatGPT to follow it. Treat the study mode as a guide you're choosing to follow. If ChatGPT goes past your mode, ask it to check the course's study rules again.
+</Warning>
+
+Your **Note to the tutor** and your Study tab exams stay in Polya. ChatGPT doesn't see them.
+
+## Messages from Polya in ChatGPT
+
+When something goes wrong, Polya sends ChatGPT a short message. ChatGPT may pass it on in its own words.
+
+| Message | What it means |
+| --- | --- |
+| **No courses yet. The student can add one at askpolya.com.** | Your Polya account has no courses. [Add a course](/polya/add-a-course). |
+| **That course isn't in your Polya account.** | ChatGPT asked for a course you haven't added. Ask it to list your courses first. |
+| **Search is taking a break. Things are busier than usual, so try again in a little while.** | Polya is under heavy use. Everything you've imported is still there. |
+| **Polya's search limit for now has been reached. Try again later.** | You've searched many times in a short period. Wait, then try again. |
+| **That search couldn't run. Keep the question under 2,000 characters.** | Ask a shorter question. |
+
+## Disconnect Polya
+
+To stop ChatGPT from reaching your Polya courses, remove Polya from ChatGPT's settings in the same place you added it. Disconnecting doesn't change anything in Polya.
+
+## Privacy
+
+ChatGPT sees the names of your courses, each course's study mode, and passages from your materials when you ask about a course. Polya receives only what ChatGPT sends to look something up, like which course and what to search for. Polya never receives your ChatGPT chat history. What you say in ChatGPT is covered by OpenAI's privacy policy. To learn more, see [Privacy and data](/polya/privacy-and-data#chatgpt-and-claude).
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Use Polya in Claude" icon="plug" href="/polya/claude">
+    Connect Polya to Claude.
+  </Card>
+  <Card title="Study modes" icon="sliders" href="/polya/study-modes">
+    What each mode allows.
+  </Card>
+</CardGroup>

@@ -1,0 +1,169 @@
+---
+title: "Use Jupyter notebooks"
+description: "Create, open, and run .ipynb notebooks on your iPad, with code, notes, charts, and data files."
+sidebarTitle: "Jupyter notebooks"
+---
+
+Lectra opens and runs Jupyter notebooks (`.ipynb` files), the format many data science and programming courses use for assignments. You can write Python in cells, run them one at a time, see charts below your code, keep notes in Markdown, and share the notebook back as a `.ipynb` file.
+
+<Note>
+  This page is about Python notebooks. For paper notebooks that you write in with Apple Pencil, see [Create notebooks](/lectra/notebooks).
+</Note>
+
+## Before you begin
+
+The first time you run a cell, your iPad needs an internet connection so Lectra can download Python. After that, notebooks run offline. To learn more, see [Run Python](/lectra/python#the-first-run).
+
+## Create a notebook
+
+<Steps>
+  <Step title="Go to Projects">
+    In your library, tap **Projects**.
+  </Step>
+  <Step title="Create the notebook">
+    Tap **New**, and then tap **Python Notebook**.
+  </Step>
+  <Step title="Name it">
+    The notebook opens with a short Markdown cell and an empty code cell. Tap **Notebook title** at the top to give it a name.
+  </Step>
+</Steps>
+
+Your notebooks appear in the **Projects** tab, after your project folders.
+
+## Open an existing notebook
+
+To open a `.ipynb` file, such as one from your course site, use any of these:
+
+- **From the Projects tab**: tap **New**, and then tap **Import Notebook**. Choose the file.
+- **From the Documents tab**: tap **New**, and then tap **Import PDF**, which also accepts `.ipynb` files.
+- **From another app or the Files app**: share or open the file, and then choose Lectra.
+- **From a project**: tap a `.ipynb` file in a project's file list. Lectra opens it full screen and saves your changes back to that file.
+
+If the file isn't a valid notebook, Lectra says "Could not read that notebook. Make sure it's a valid .ipynb file."
+
+## Write and run cells
+
+A notebook is a list of cells. Code cells hold Python. Markdown cells hold notes.
+
+### Add a cell
+
+At the bottom of the notebook, tap one of these. Lectra adds the new cell at the end.
+
+- **Code**: a Python cell.
+- **Markdown**: a text cell for notes and headings.
+- **Data**: brings in a data file. To learn more, see [Load a data file](#load-a-data-file).
+
+### Run code
+
+- To run one cell, tap **Run** on the cell.
+- To run every cell from top to bottom, tap **Run All** at the top.
+
+A code cell shows its run number on the left: `[ ]` before it runs, `[*]` while it runs, and a number such as `[3]` after. If you change a cell after you run it, its output shows "Output is from older code — run to refresh."
+
+### Use keyboard shortcuts
+
+With a hardware keyboard:
+
+| Shortcut | What it does |
+|---|---|
+| <kbd>⌘</kbd> <kbd>Return</kbd> | Runs the cell. |
+| <kbd>Shift</kbd> <kbd>Return</kbd> | Runs the cell and moves to the next code cell. Adds a new one if there isn't one. |
+| <kbd>Option</kbd> <kbd>Return</kbd> | Runs the cell and adds a new cell below it. |
+
+### Edit Markdown cells
+
+Tap a Markdown cell, or tap its pencil, to edit it. Tap the pencil again to see it formatted. Markdown cells show headings (`#`, `##`, `###`), bulleted lists, and inline formatting such as bold, italics, and code.
+
+### Change, move, or delete a cell
+
+On a cell, tap **Cell actions** (the three dots), and then tap one of these:
+
+- **Run**
+- **Convert to Markdown** or **Convert to Code**
+- **Move Up** or **Move Down**
+- **Delete Cell**
+
+## See your results
+
+Below each code cell, Lectra shows:
+
+- Text that your code prints.
+- The value of the last line in the cell.
+- Charts from Matplotlib, as images.
+- Errors, in red.
+
+Long output shows only its last 200 lines. Tap **Show full output** to see all of it.
+
+<Note>
+  pandas DataFrames show as plain text, not as formatted tables.
+</Note>
+
+## Load a data file
+
+<Steps>
+  <Step title="Tap Data">
+    At the bottom of the notebook, tap **Data**, and then choose a CSV, TSV, or text file.
+  </Step>
+  <Step title="Choose the separator">
+    In **Import data**, choose how values are separated: **Comma**, **Tab**, or **Semicolon**.
+  </Step>
+  <Step title="Choose how to load it">
+    - Tap **Load as DataFrame** to add a cell that reads the file into pandas.
+    - Tap **Just add the file** to make the file available so you can read it with your own code.
+  </Step>
+</Steps>
+
+<Note>
+  The data file stays available only until you restart Python or close the notebook. After that, load it again.
+</Note>
+
+## Install a package
+
+If a cell imports a package that isn't installed, Lectra asks whether to download it. Tap **Install**. To manage packages, tap **More** (the three dots) > **Manage Packages**. To learn which packages are included and which you can add, see [Run Python](/lectra/python#install-more-packages).
+
+## Save and share
+
+Lectra saves your notebook automatically when you run cells, change the title, load data, or close it. There's no Save button.
+
+To share a notebook, for example to submit it, tap **More** > **Share Notebook (.ipynb)**. Lectra names the file after the notebook's title.
+
+## Restart Python
+
+Tap **More** > **Restart Kernel**. If a cell is running, this stops it. If nothing is running, it clears all variables, so you can start fresh. Your cells and their output stay.
+
+To close a notebook, tap **Close**.
+
+## Limits
+
+- There's no button to clear outputs or to add a cell above another cell.
+- `input()` doesn't ask you for text in a notebook. It returns an empty string.
+- Notebooks show text, images, and errors. Other kinds of output in a notebook you open, such as interactive widgets, aren't shown, but Lectra keeps them in the file.
+- Files that your code writes aren't saved. To learn more, see [Run Python](/lectra/python#work-with-files).
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="The notebook stays on Starting Python…">
+    Python may still need its one-time download. Connect to the internet, and then run the cell again.
+  </Accordion>
+  <Accordion title="“Could not read that notebook.”">
+    The file isn't a valid `.ipynb` notebook. Download it again from its source, and then import it.
+  </Accordion>
+  <Accordion title="A cell has been running for a long time">
+    Tap **More** > **Restart Kernel** to stop it. If a single run takes longer than 3 minutes, Lectra stops waiting and shows "Python stopped responding".
+  </Accordion>
+  <Accordion title="NameError after reopening a notebook">
+    Variables don't last after you close a notebook or restart Python. Tap **Run All** to run every cell again.
+  </Accordion>
+</AccordionGroup>
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Run Python" icon="python" href="/lectra/python">
+    Included packages, installing more, and limits.
+  </Card>
+  <Card title="Use the code editor" icon="code" href="/lectra/code-editor">
+    Work with project files and folders.
+  </Card>
+</CardGroup>

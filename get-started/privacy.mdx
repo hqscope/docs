@@ -1,0 +1,97 @@
+---
+title: "Privacy at a glance"
+description: "A plain-language summary of what the Scope extension, Lectra, and Polya keep on your device, what they store with your account, and how AI features use your data."
+sidebarTitle: "Privacy"
+---
+
+This page summarizes, in plain language, how Scope apps handle your data. It covers the Scope extension, Lectra, Lectra for Mac, and Polya. The full privacy policies are the official versions. If this summary and a policy ever differ, the policy applies.
+
+- [Scope privacy policy](https://www.canvascope.org/privacy): the Scope extension, Lectra, and the Scope website.
+- [Polya privacy policy](https://askpolya.com/privacy): Polya.
+
+For details on each app, see [Privacy and your data](/chrome/privacy-and-data) for the Scope extension and [Privacy and data in Polya](/polya/privacy-and-data).
+
+## The short version
+
+- **No ads.** None of the Scope apps show ads.
+- **No tracking.** Scope doesn't track you across other companies' apps and websites, doesn't use advertising identifiers, and doesn't sell your data.
+- **Your notes and documents aren't used to train AI models.** Scope doesn't use your notes, documents, or course materials to train AI models, and Lectra's document intelligence never sends your documents off your device.
+- **Your course search stays on your computer.** The Scope extension builds its search index of your courses in your browser and searches it there.
+- **Lectra's document intelligence runs on your iPad.** Summaries and answers about your documents are written on your device, and they're off until you turn them on.
+- **Accounts are optional where they can be.** You can search with the extension and use Lectra without signing in. Polya needs an account because it keeps your courses for you.
+- **Scope counts how many people use its apps.** The count never includes what you search for, read, or write. See [How Scope counts usage](#how-scope-counts-usage).
+
+## What stays on your device
+
+| App | What stays on your device |
+|---|---|
+| Scope extension | Your search index, the text Scope reads from your course pages and files, your recent searches, and your settings. Course text stays in your browser unless you turn on **Sync course text across devices** in Settings. |
+| Lectra | Your documents and your handwriting. If you use Lectra without an account, everything stays on your iPad. |
+| Lectra, signed in | Your handwriting still stays on your iPad. Lectra backs up a copy of your pages with your markup drawn on them, but not the editable ink. |
+
+<Note>
+  Lectra doesn't sync your annotated documents across devices. When you're signed in, it keeps a backup copy of your pages. To learn more, see [Backups](/lectra/backups).
+</Note>
+
+## What's stored with your account
+
+| App | What's stored with your account |
+|---|---|
+| Scope extension | Your name and email from Google, the PDFs you send to Lectra, your search preferences, and, if you use them, your student profile and personalized suggestions. If you connect your Canvas account in Settings, Scope keeps your access token, stored encrypted. |
+| Lectra | Your name and email from Google or Apple, a backup copy of your pages, the PDFs sent to you from Scope, and your device's name, so files sent to you reach the right iPad. |
+| Polya | Your name and email, your Canvas address and access token (stored encrypted) if you connect Canvas, the course materials you bring in, the search index Polya builds from them, your study modes, your conversations, and your practice. |
+
+For how to remove any of this, see [Delete your account and data](/get-started/delete-your-account).
+
+## How AI features use your data
+
+<AccordionGroup>
+  <Accordion title="Lectra: summaries, answers, and study tools">
+    These features use Apple Intelligence on your iPad or iPhone. The text of your documents is processed on your device and isn't sent to Scope or anyone else to power them. They're off until you turn them on.
+
+    In **Settings** > **Intelligence**, you can turn them off and see recent activity from the last 30 days. Lectra keeps only the name of each document and nothing from inside it. To learn more, see [Use Apple Intelligence in Lectra](/lectra/apple-intelligence).
+  </Accordion>
+  <Accordion title="Lectra: the Remote Desktop assistant">
+    The assistant that works your Mac from your iPad uses your own Anthropic API key. When you use it, your request and images of your Mac's screen are sent to Anthropic to decide each step, under the terms of your Anthropic account. To learn more, see [Lectra for Mac](/lectra/mac).
+  </Accordion>
+  <Accordion title="Scope extension: Ask Scope">
+    To answer a question, Scope may send the course passages it needs through Scope's servers to an AI service that writes the answer. That data is used only to answer you. Scope doesn't use it to train AI models, sell it, or use it for advertising. To learn more, see [Ask Scope](/chrome/ask-scope).
+  </Accordion>
+  <Accordion title="Polya">
+    To answer you, Polya sends your question, the relevant passages from your course, and your recent conversation to the AI service that writes its replies. Another service reads your course files, including scanned pages, to build the search index. These services work on Scope's behalf, and they aren't allowed to use your materials or conversations to train their models.
+  </Accordion>
+  <Accordion title="Polya in Claude or ChatGPT">
+    If you connect Polya to Claude or ChatGPT, that assistant can see the names of your Polya courses, the study mode for each, and passages from your materials when you ask about a course. Polya never receives your chat history. What you say in Claude or ChatGPT is covered by that company's own privacy policy. The connection can only read; it can't change anything in Polya or Canvas.
+  </Accordion>
+</AccordionGroup>
+
+## How Scope counts usage
+
+Scope counts how many people use its apps, so it can tell whether they're working. Each app sends a short signal when you use it. The signal contains:
+
+- A random number your device makes for that install.
+- Which app and platform it is.
+- The app version.
+
+The signal never includes your searches, the pages you visit, course or file names, document contents, or anything you write. If you're signed in, the count is linked to your account, so using Scope on two devices counts as one person.
+
+Polya also keeps a record of what you do in it, such as adding a course, starting a conversation, asking a question, or opening a citation. That record is linked to your account and never includes what you asked or read.
+
+The canvascope.org website measures page views and page speed without cookies and without following you to other sites.
+
+## Your choices
+
+| What you can do | Where |
+|---|---|
+| Use the extension or Lectra without an account | Skip sign-in in the extension. In Lectra, choose **Sign in later**. See [Your Scope account](/get-started/account). |
+| Clear what the extension saved in your browser | Extension **Settings** > **Your data** > **Clear Scope data on this browser** |
+| Keep course text off Scope's servers | Leave **Sync course text across devices** turned off in extension **Settings**. It's off unless you turn it on. |
+| Turn off personalized suggestions | Extension **Settings** > **Personalized suggestions** |
+| Turn off Lectra's document intelligence | Lectra **Settings** > **Intelligence** |
+| Delete one Polya course and everything imported for it | Polya course list > **Course options** > **Delete course** |
+| Disconnect Polya from Claude or ChatGPT | That assistant's settings |
+| Delete your Scope account | See [Delete your account and data](/get-started/delete-your-account) |
+
+## Questions
+
+To ask about your data or make a privacy request, email [canvascopeextension@gmail.com](mailto:canvascopeextension@gmail.com). For Polya, email [hello@askpolya.com](mailto:hello@askpolya.com) from the address you sign in with. To learn more, see [Get help](/resources/get-help).

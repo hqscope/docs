@@ -1,0 +1,251 @@
+---
+title: "Use Remote Desktop"
+description: "Open your Mac's screen on your iPad, control it with touch and a keyboard, send it files, and let an assistant carry out tasks on it."
+sidebarTitle: "Remote Desktop"
+---
+
+Remote Desktop puts your Mac's screen on your iPad. You can click, type, and scroll on your Mac from wherever you are, send photos and files to it, and copy text between the two. You can also give a task to an assistant, such as "open Safari and go to my course site", and approve each step it takes.
+
+## Before you begin
+
+- **On your Mac**: Lectra for Mac, signed in, with screen and control access allowed. To set it up, see [Lectra for Mac](/lectra/mac), or follow the setup guide in Lectra on your iPad.
+- **On your iPad**: Lectra, signed in to the same account as your Mac. To learn about accounts, see [Your Scope account](/get-started/account).
+- **One account on both**: Lectra for Mac signs in with Google only. If you signed in to Lectra on your iPad with Apple, the Mac app can't reach that account yet.
+- **A network connection** on both devices.
+
+Remote Desktop is free. The optional assistant uses your own Anthropic API key, as described in [Set up the assistant](#set-up-the-assistant).
+
+## Open Remote Desktop
+
+In your library's sidebar, tap **Remote Desktop**. If your screen is too narrow to show the sidebar, open **Settings** > **Account**, and then tap **Remote Desktop**.
+
+The screen lists the Macs you've set up. Each one shows **Online**, **Last seen** with how long ago, or **Offline**.
+
+## Set up your first Mac
+
+If you haven't set up a Mac yet, Remote Desktop shows **Set up your Mac**. Lectra walks you through six steps.
+
+<Steps>
+  <Step title="Start the guide">
+    Tap **Set up my Mac**.
+  </Step>
+  <Step title="Get Lectra Receiver">
+    On the Mac you want to reach, open `canvascope.org/receiver`. Tap **Copy link** to copy the address, or **Open** to open it here. The page is the Lectra for Mac download.
+  </Step>
+  <Step title="Install it">
+    On the Mac, open the file you downloaded, drag **Lectra Receiver** into your **Applications** folder, and then open it. If macOS asks whether you're sure you want to open it, click **Open**. The app has no window or Dock icon. Look for its icon in the menu bar.
+  </Step>
+  <Step title="Sign in on your Mac">
+    Click the Lectra Receiver icon in the menu bar, and then click **Sign In**. Use the same account you use on your iPad. The guide shows which account you're signed in with on the iPad.
+  </Step>
+  <Step title="Allow screen and control">
+    In the menu, click **Grant** next to **Screen Recording** and **Accessibility**, and turn on Lectra Receiver when System Settings opens. If the Mac still says **Action needed**, click **Enabled it? Quit & Reopen to finish**.
+  </Step>
+  <Step title="Turn on sharing">
+    Make sure **Share this Mac** is on. The dot turns green and reads **Ready**.
+  </Step>
+  <Step title="Check for your Mac">
+    On your iPad, tap **Check for my Mac**. Your Mac appears in the list within a few seconds.
+  </Step>
+</Steps>
+
+There's no code to enter. Your Mac trusts any iPad signed in to your account. To add another Mac later, tap **Set up another Mac**.
+
+## Connect to your Mac
+
+<Steps>
+  <Step title="Choose your Mac">
+    In **Remote Desktop**, find your Mac, and then tap **Connect**.
+  </Step>
+  <Step title="Wait for the screen">
+    The bar at the top shows your Mac's name and **Connecting**, then **Live** when the screen appears.
+  </Step>
+</Steps>
+
+If your Mac is asleep, Lectra wakes it first and shows **Waking**. You can also tap **Wake** on a Mac that isn't online. Your iPad can wake a Mac on the same Wi-Fi, or from anywhere if you allowed notifications for the Mac app. To learn how to set this up, see [Wake your Mac from your iPad](/lectra/mac#wake-your-mac-from-your-ipad).
+
+<Note>
+  Remote Desktop connects most reliably when your iPad and Mac are on the same network. Away from that network, it connects over the internet on many networks, but some networks, such as school, workplace, or cellular networks, can block the connection.
+</Note>
+
+## Control your Mac
+
+### Touch and Apple Pencil
+
+| To | Do this |
+|---|---|
+| Click | Tap. |
+| Double-click | Double-tap. |
+| Right-click | Tap with two fingers. |
+| Move the pointer | Drag one finger. |
+| Scroll | Drag two fingers. |
+| Click and drag | Press and hold, and then drag. |
+
+Apple Pencil works the same way as your finger. You can't pinch to zoom.
+
+Tap **Mouse mode** in the control bar to switch between two ways of moving the pointer:
+
+- **Trackpad** (the default): drag anywhere to move the pointer, like a laptop trackpad.
+- **Direct**: the pointer jumps to wherever you touch.
+
+A trackpad or mouse connected to your iPad also moves, clicks, and scrolls on the Mac.
+
+### Keyboard
+
+- **Hardware keyboard**: your typing and most shortcuts, such as <kbd>⌘</kbd> <kbd>C</kbd>, go to your Mac.
+- **On-screen keyboard**: tap **Remote keyboard** in the control bar to show or hide it.
+- **Modifier keys**: tap **⇧**, **⌃**, **⌥**, or **⌘** in the control bar to hold that key for your next key or click. Tap it again to release it.
+
+### More than one display
+
+If your Mac has more than one display, tap **Switch display** in the control bar to see the next one. With a hardware keyboard, press <kbd>Control</kbd> <kbd>Option</kbd> <kbd>←</kbd> or <kbd>→</kbd>. You see one display at a time.
+
+## Send files to your Mac
+
+<Steps>
+  <Step title="Tap Send files">
+    In the control bar, tap **Send files**. On a narrow screen, it's under **More**.
+  </Step>
+  <Step title="Choose what to send">
+    In **Send to your Mac**, tap **Photos**, **Camera**, or **Files**, and then pick one item. **Camera** takes a new photo and sends it.
+  </Step>
+  <Step title="Wait for it to finish">
+    Lectra shows "Sending" and then "Sent" followed by the file name.
+  </Step>
+</Steps>
+
+On your Mac, the file goes to the **Lectra** folder in **Downloads**. You can change the folder in the Mac app's settings. If a file with the same name is already there, the new one gets a number added to its name.
+
+<Note>
+  Keep Lectra open until the file finishes sending. Leaving Lectra or disconnecting cancels a file that's still sending. You can send one item at a time.
+</Note>
+
+## Copy and paste between iPad and Mac
+
+- **From your Mac to your iPad**: copy text on the Mac during a session. It's on your iPad's clipboard right away.
+- **From your iPad to your Mac**: copy text on your iPad, and then tap **Send clipboard** in the control bar. Then paste on the Mac.
+
+Only text is shared, not images or files.
+
+## Lock and end a session
+
+- **Automatic lock**: after 5 minutes without input, Lectra locks the session and shows **Session locked**. Tap **Unlock**, and then use Face ID or your passcode to continue.
+- **End the session**: tap **Disconnect** in the control bar, and then tap **Disconnect** to confirm. You can also tap **End session** (the × at the top right), which ends it right away.
+- **Leave Lectra**: the screen stops while you're away and reconnects when you come back.
+
+<Note>
+  You can't record a lecture or play a recording while you're connected to your Mac.
+</Note>
+
+## Use the assistant
+
+The assistant carries out a task on your Mac for you. You describe it in plain words, and the assistant looks at your Mac's screen and works through the steps: clicking, typing, pressing keys, opening apps and websites, and searching the web. By default, it asks you before every click, keystroke, or app it opens.
+
+### Set up the assistant
+
+The assistant needs two things:
+
+- You're signed in to Lectra.
+- You've saved your own Anthropic API key in Lectra. To get a key, create one in your Anthropic account.
+
+To save your key, use the terminal:
+
+<Steps>
+  <Step title="Open a terminal">
+    In your library, tap **Projects** > **New** > **Terminal**.
+  </Step>
+  <Step title="Start the sign-in">
+    Type `lectra`, and then press Return. A box titled **Lectra Agent** appears and says that no key was found. Type `/login`, and then press Return.
+  </Step>
+  <Step title="Paste your key">
+    At "Paste your Claude API key", paste your key, and then press Return. The key shows on screen while you paste it. Lectra confirms that it saved the key.
+  </Step>
+  <Step title="Leave the terminal">
+    Type `/quit`, press Return, and then close the terminal.
+  </Step>
+</Steps>
+
+Lectra stores the key only on this iPad, for your account. To remove it, follow the same steps and type `/logout` instead of `/login`.
+
+### Give the assistant a task
+
+<Steps>
+  <Step title="Open the assistant">
+    During a session, tap **Control Mac with an assistant** (the wand button at the bottom right). The **Control Mac** panel opens.
+  </Step>
+  <Step title="Describe the task">
+    In **Command…**, type what you want, such as "open Safari and go to bcourses.berkeley.edu". You can also tap the microphone to dictate.
+  </Step>
+  <Step title="Approve each step">
+    Before each action, the panel shows what the assistant wants to do, such as **Click** or **Type**, with details. Tap **Approve** to let it continue, or **Decline** to stop that action.
+  </Step>
+  <Step title="Stop at any time">
+    Tap **Stop** to end the task.
+  </Step>
+</Steps>
+
+The assistant doesn't ask before it looks at the screen, moves the pointer, scrolls, waits, or switches displays. It can't ask you questions in the middle of a task. If it stops, send the command again or try different wording.
+
+### Let the assistant run without asking
+
+Turn on **Auto-run** in the panel to approve every action automatically, including one that's waiting. Auto-run stays on for later sessions until you quit and reopen Lectra.
+
+<Warning>
+  With Auto-run on, the assistant can click, type, save, quit apps, and delete without checking with you. Turn it on only for tasks you'd be comfortable letting it finish on its own.
+</Warning>
+
+### When the assistant pauses
+
+The assistant pauses and asks before going further when a task runs long. The panel shows why, such as **Paused — cost check**, **Paused — step limit**, or **Paused — time limit**. Tap **Continue** to keep going, or **Stop** to end the task. It also pauses if you leave Lectra, and shows **Paused while you were away**.
+
+### Assistant privacy and cost
+
+- The assistant sends screenshots of your Mac's screen and your commands to Anthropic, using your API key, so it can decide what to do next.
+- Anthropic bills the assistant's use to your Anthropic account. Lectra doesn't charge for it.
+- Dictating a command happens on your iPad.
+
+### Assistant limits
+
+- Lectra for Mac doesn't yet tell your iPad when the Mac is locked. If your Mac locks during a task, the assistant's clicks and typing can reach the lock screen. Keep your Mac unlocked while the assistant works.
+- With the current Lectra for Mac, the assistant opens websites, apps, and searches by typing into Spotlight, which takes a little longer.
+- The assistant can't read the text on your Mac's screen back to you with the current Lectra for Mac.
+- If you changed the approval mode with `/mode` in the terminal's `lectra` session, that setting also applies to the assistant. In some modes, it doesn't ask before single clicks or typing.
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="“Can't check for your Macs”">
+    Lectra couldn't reach your account. Check that you're signed in to Lectra and that your iPad is online, and then tap **Try Again**.
+  </Accordion>
+  <Accordion title="My Mac doesn't appear in the list">
+    On the Mac, click the Lectra Receiver icon in the menu bar. Check that it says **Ready**, that **Share this Mac** is on, and that it's signed in to the same account as your iPad. Then tap **Refresh Macs** on your iPad.
+  </Accordion>
+  <Accordion title="“Couldn’t reach” my Mac">
+    Make sure Lectra Receiver is open and sharing on your Mac. If the Mac is asleep, tap **Wake**. If you're away from the Mac's network, try a different network.
+  </Accordion>
+  <Accordion title="“Join this Mac's Wi-Fi to wake it”">
+    Your iPad can wake this Mac only on the same Wi-Fi. To wake it from anywhere, open Lectra Receiver on the Mac once while it's awake, and allow its notifications.
+  </Accordion>
+  <Accordion title="The Mac didn't wake up">
+    A Mac that has been asleep for a long time, or a laptop on battery with the lid closed, has to be woken by hand. Keep the Mac plugged in and turn on **Stay ready for your iPad** in the Mac app's settings.
+  </Accordion>
+  <Accordion title="The assistant says to add a key in Settings › Assistant">
+    Lectra doesn't have that screen. Save your key in the terminal, as described in [Set up the assistant](#set-up-the-assistant).
+  </Accordion>
+  <Accordion title="I don't see the assistant button">
+    The button appears only when you're signed in and the session isn't locked. If the session says **Session locked**, unlock it first.
+  </Accordion>
+</AccordionGroup>
+
+If you still need help, see [Get help](/resources/get-help).
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Lectra for Mac" icon="laptop" href="/lectra/mac">
+    Install and set up the Mac app.
+  </Card>
+  <Card title="Send files between devices" icon="arrow-right-arrow-left" href="/lectra/send-between-devices">
+    Every way to move files between Chrome, your iPad, and your Mac.
+  </Card>
+</CardGroup>
