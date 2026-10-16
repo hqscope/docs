@@ -1,0 +1,252 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Scope Docs",
+  "description": "Learn how to install and use every Scope app: the Chrome extension, Lectra for iPad, and Polya.",
+  "colors": {
+    "primary": "#C42B26",
+    "light": "#E5484D",
+    "dark": "#A3211D"
+  },
+  "background": {
+    "color": {
+      "light": "#FBF7EE",
+      "dark": "#14100C"
+    }
+  },
+  "fonts": {
+    "family": "Schibsted Grotesk"
+  },
+  "appearance": {
+    "default": "system"
+  },
+  "styling": {
+    "eyebrows": "section",
+    "codeblocks": "system"
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg",
+    "href": "https://docs.canvascope.org"
+  },
+  "favicon": "/favicon.svg",
+  "icons": {
+    "library": "fontawesome"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "canvascope.org",
+        "href": "https://canvascope.org"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Get help",
+      "href": "/resources/get-help"
+    }
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Get started",
+        "icon": "rocket",
+        "groups": [
+          {
+            "group": "Get started",
+            "pages": [
+              "index",
+              "get-started/overview",
+              "get-started/choose-an-app",
+              "get-started/quickstart",
+              "get-started/system-requirements"
+            ]
+          },
+          {
+            "group": "Your account",
+            "pages": [
+              "get-started/account",
+              "get-started/delete-your-account",
+              "get-started/privacy"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Chrome extension",
+        "icon": "chrome",
+        "groups": [
+          {
+            "group": "Get started",
+            "pages": [
+              "chrome/overview",
+              "chrome/install",
+              "chrome/connect-your-courses"
+            ]
+          },
+          {
+            "group": "Use the extension",
+            "pages": [
+              "chrome/search",
+              "chrome/ask-scope",
+              "chrome/study-plan",
+              "chrome/send-to-ipad",
+              "chrome/berkeley-schedule-planner"
+            ]
+          },
+          {
+            "group": "Reference",
+            "pages": [
+              "chrome/keyboard-shortcuts",
+              "chrome/settings",
+              "chrome/privacy-and-data",
+              "chrome/troubleshooting",
+              "chrome/uninstall"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Lectra",
+        "icon": "tablet-screen-button",
+        "groups": [
+          {
+            "group": "Get started",
+            "pages": [
+              "lectra/overview",
+              "lectra/install",
+              "lectra/library",
+              "lectra/import"
+            ]
+          },
+          {
+            "group": "Read and write",
+            "pages": [
+              "lectra/annotate",
+              "lectra/apple-pencil",
+              "lectra/text",
+              "lectra/notebooks",
+              "lectra/scan",
+              "lectra/search",
+              "lectra/version-history"
+            ]
+          },
+          {
+            "group": "Record and understand",
+            "pages": [
+              "lectra/record-lectures",
+              "lectra/apple-intelligence"
+            ]
+          },
+          {
+            "group": "Code on your iPad",
+            "pages": [
+              "lectra/python",
+              "lectra/jupyter-notebooks",
+              "lectra/terminal",
+              "lectra/git",
+              "lectra/code-editor"
+            ]
+          },
+          {
+            "group": "Your Mac and browser",
+            "pages": [
+              "lectra/send-between-devices",
+              "lectra/mac",
+              "lectra/receiver",
+              "lectra/remote-desktop"
+            ]
+          },
+          {
+            "group": "Share and back up",
+            "pages": [
+              "lectra/export-and-share",
+              "lectra/backups"
+            ]
+          },
+          {
+            "group": "Reference",
+            "pages": [
+              "lectra/settings",
+              "lectra/keyboard-shortcuts",
+              "lectra/troubleshooting"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Polya",
+        "icon": "graduation-cap",
+        "groups": [
+          {
+            "group": "Get started",
+            "pages": [
+              "polya/overview",
+              "polya/get-started",
+              "polya/add-a-course"
+            ]
+          },
+          {
+            "group": "Learn with Polya",
+            "pages": [
+              "polya/chat",
+              "polya/study-modes",
+              "polya/study",
+              "polya/materials"
+            ]
+          },
+          {
+            "group": "Use Polya in other apps",
+            "pages": [
+              "polya/chatgpt",
+              "polya/claude"
+            ]
+          },
+          {
+            "group": "Reference",
+            "pages": [
+              "polya/privacy-and-data",
+              "polya/troubleshooting"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Help",
+        "icon": "life-ring",
+        "groups": [
+          {
+            "group": "Get help",
+            "pages": [
+              "resources/get-help",
+              "resources/troubleshooting",
+              "resources/faq"
+            ]
+          },
+          {
+            "group": "Reference",
+            "pages": [
+              "resources/glossary",
+              "resources/release-notes",
+              "resources/legal"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "contextual": {
+    "options": ["copy", "view", "chatgpt", "claude"]
+  },
+  "search": {
+    "prompt": "Search the Scope docs"
+  },
+  "seo": {
+    "indexing": "navigable"
+  },
+  "footer": {
+    "socials": {
+      "website": "https://canvascope.org"
+    }
+  }
+}

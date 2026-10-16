@@ -1,0 +1,101 @@
+---
+title: "Go back to an earlier version"
+description: "Use History to see earlier versions of your handwriting in a document and go back to one."
+sidebarTitle: "Version history"
+---
+
+As you write, Lectra keeps restore points for each document. If you erase something by mistake, or want a page the way it looked an hour ago, you can open **History**, look at an earlier point, and go back to it. Going back never deletes anything: where you are now is kept too, so you can return to it.
+
+<Note>
+  Restore points cover your handwriting and drawings: pen, highlighter, and shapes. Typed text boxes and images aren't part of a restore point, so going back doesn't change them.
+</Note>
+
+## Open History
+
+<Steps>
+  <Step title="Open the document">
+    In your library, tap the document to open it.
+  </Step>
+  <Step title="Open the More actions menu">
+    In the editor's top bar, tap **More actions** (the ellipsis button).
+  </Step>
+  <Step title="Tap History">
+    Tap **History**. A list of restore points opens, newest first.
+  </Step>
+</Steps>
+
+If the document is new, the list is empty and says that points will appear as you write.
+
+## Read the list
+
+Each row shows what kind of point it is, how many marks the document had, and which pages had marks.
+
+| Label | When Lectra makes it |
+|---|---|
+| **Saved** | When the document saves. Lectra keeps at most one of these every five minutes, so frequent saves don't push older points out. |
+| **Along the way** | Automatically while you write a lot in one sitting. |
+| **Before going back** | Right before you go back to an earlier point, so you can undo the change. |
+| **Went back** | The result of going back to an earlier point. |
+
+The newest point is marked **Now**, because that is how the document looks already. Every other point shows **Look**.
+
+## Look at an earlier point
+
+<Steps>
+  <Step title="Open a restore point">
+    In **History**, tap a row that shows **Look**. A preview of that point opens.
+  </Step>
+  <Step title="Choose a page">
+    Use the **Page** picker to look at each page as it was.
+  </Step>
+</Steps>
+
+If a page can't be previewed, the preview says so. Going back still brings that page along.
+
+## Go back to an earlier point
+
+<Steps>
+  <Step title="Choose the point">
+    In **History**, open the point you want, or swipe left on its row.
+  </Step>
+  <Step title="Go back">
+    Tap **Go back**.
+  </Step>
+  <Step title="Confirm">
+    In the confirmation, tap **Go back** again. Your pages return to how they looked at that point.
+  </Step>
+</Steps>
+
+Lectra adds a **Before going back** point first, then a **Went back** point. To undo the change, open **History** again and go back to the **Before going back** point.
+
+## Limits
+
+<Note>
+  - Lectra keeps up to 20 restore points for each document.
+  - Restore points older than 30 days are removed, but Lectra always keeps at least the 3 newest points, however old they are.
+  - Restore points are stored on your iPad only. They aren't part of your backup, and they aren't included when you export or share a document.
+</Note>
+
+## Get back marks after Lectra closes unexpectedly
+
+Lectra saves each stroke as soon as you lift Apple Pencil. If Lectra closes before the document finishes saving, for example because your iPad restarts, the next time you open that document Lectra checks for marks that didn't make it into the last save.
+
+If it finds any, you see **Some marks weren't saved**, with a message such as "Lectra closed before 3 marks on page 2 were saved. Want them back?"
+
+- Tap **Bring them back** to add the marks to the page. Lectra confirms with "Your marks are back."
+- Tap **Leave them out** to keep the document as it was last saved.
+
+<Note>
+  A stroke you were still drawing at the moment Lectra closed can't be recovered. Every finished stroke can.
+</Note>
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Mark up a document" icon="pen" href="/lectra/annotate#undo-and-redo">
+    Undo and redo changes while you work.
+  </Card>
+  <Card title="Backups" icon="cloud-arrow-up" href="/lectra/backups">
+    What Lectra backs up when you sign in.
+  </Card>
+</CardGroup>
